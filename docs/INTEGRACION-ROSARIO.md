@@ -7,7 +7,14 @@ La aplicación React de `cartunduaga06/ave-maria` se publica dentro de la web Je
 - Jekyll conserva la portada, vídeos, navegación y páginas legales.
 - El frontend React compilado vive en `rosario/`.
 - `HashRouter` permite navegar en GitHub Pages sin configurar un servidor SPA.
+- Los recursos estáticos de la aplicación usan la ruta pública `/rosario/`, incluida la biblioteca de audio.
 - Firebase es opcional en el build público: sin variables `VITE_FIREBASE_*` funcionan las pantallas locales; con ellas se activan autenticación, intenciones, audios remotos y panel administrador.
+
+## Pendientes y limitaciones de audio
+
+- `TODO:` faltan en el repositorio los archivos de audio de los misterios gozosos y gloriosos.
+- `TODO:` faltan los cuatro archivos de rosarios completos (`audio/rosarios/`). La interfaz conserva sus referencias, pero no puede reproducirlos hasta que el titular proporcione esos archivos.
+- Los audios disponibles sí se sirven desde `/rosario/audio/`. La reproducción requiere pulsar una acción de la interfaz; los navegadores bloquean audio iniciado automáticamente.
 
 ## Variables para activar Firebase
 

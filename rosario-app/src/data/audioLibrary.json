@@ -3,49 +3,49 @@
         {
             "id": "sign_of_cross",
             "type": "prayer",
-            "src": "/audio/prayers/sign-of-cross.mp3",
+            "src": "/rosario/audio/prayers/sign-of-cross.mp3",
             "title": "Señal de la Cruz",
             "duration": 35
         },
         {
             "id": "credo",
             "type": "prayer",
-            "src": "/audio/prayers/credo.mp3",
+            "src": "/rosario/audio/prayers/credo.mp3",
             "title": "Credo",
             "duration": 45
         },
         {
             "id": "padre_nuestro",
             "type": "prayer",
-            "src": "/audio/prayers/padre-nuestro.mp3",
+            "src": "/rosario/audio/prayers/padre-nuestro.mp3",
             "title": "Padre Nuestro",
             "duration": 30
         },
         {
             "id": "ave_maria",
             "type": "prayer",
-            "src": "/audio/prayers/ave-maria.mp3",
+            "src": "/rosario/audio/prayers/ave-maria.mp3",
             "title": "Ave María",
             "duration": 20
         },
         {
             "id": "gloria",
             "type": "prayer",
-            "src": "/audio/prayers/gloria.mp3",
+            "src": "/rosario/audio/prayers/gloria.mp3",
             "title": "Gloria",
             "duration": 15
         },
         {
             "id": "fatima",
             "type": "prayer",
-            "src": "/audio/prayers/fatima.mp3",
+            "src": "/rosario/audio/prayers/fatima.mp3",
             "title": "Jaculatoria de Fátima",
             "duration": 12
         },
         {
             "id": "salve",
             "type": "prayer",
-            "src": "/audio/prayers/salve.mp3",
+            "src": "/rosario/audio/prayers/salve.mp3",
             "title": "La Salve",
             "duration": 60
         }
@@ -54,140 +54,140 @@
         {
             "id": "gozosos_1",
             "type": "mystery",
-            "src": "/audio/mysteries/gozosos_1.mp3",
+            "src": "/rosario/audio/mysteries/gozosos_1.mp3",
             "title": "1º Misterio Gozoso",
             "duration": 45
         },
         {
             "id": "gozosos_2",
             "type": "mystery",
-            "src": "/audio/mysteries/gozosos_2.mp3",
+            "src": "/rosario/audio/mysteries/gozosos_2.mp3",
             "title": "2º Misterio Gozoso",
             "duration": 45
         },
         {
             "id": "gozosos_3",
             "type": "mystery",
-            "src": "/audio/mysteries/gozosos_3.mp3",
+            "src": "/rosario/audio/mysteries/gozosos_3.mp3",
             "title": "3º Misterio Gozoso",
             "duration": 45
         },
         {
             "id": "gozosos_4",
             "type": "mystery",
-            "src": "/audio/mysteries/gozosos_4.mp3",
+            "src": "/rosario/audio/mysteries/gozosos_4.mp3",
             "title": "4º Misterio Gozoso",
             "duration": 45
         },
         {
             "id": "gozosos_5",
             "type": "mystery",
-            "src": "/audio/mysteries/gozosos_5.mp3",
+            "src": "/rosario/audio/mysteries/gozosos_5.mp3",
             "title": "5º Misterio Gozoso",
             "duration": 45
         },
         {
             "id": "dolorosos_1",
             "type": "mystery",
-            "src": "/audio/mysteries/dolorosos_1.mp3",
+            "src": "/rosario/audio/mysteries/dolorosos_1.mp3",
             "title": "1º Misterio Doloroso",
             "duration": 45
         },
         {
             "id": "dolorosos_2",
             "type": "mystery",
-            "src": "/audio/mysteries/dolorosos_2.mp3",
+            "src": "/rosario/audio/mysteries/dolorosos_2.mp3",
             "title": "2º Misterio Doloroso",
             "duration": 45
         },
         {
             "id": "dolorosos_3",
             "type": "mystery",
-            "src": "/audio/mysteries/dolorosos_3.mp3",
+            "src": "/rosario/audio/mysteries/dolorosos_3.mp3",
             "title": "3º Misterio Doloroso",
             "duration": 45
         },
         {
             "id": "dolorosos_4",
             "type": "mystery",
-            "src": "/audio/mysteries/dolorosos_4.mp3",
+            "src": "/rosario/audio/mysteries/dolorosos_4.mp3",
             "title": "4º Misterio Doloroso",
             "duration": 45
         },
         {
             "id": "dolorosos_5",
             "type": "mystery",
-            "src": "/audio/mysteries/dolorosos_5.mp3",
+            "src": "/rosario/audio/mysteries/dolorosos_5.mp3",
             "title": "5º Misterio Doloroso",
             "duration": 45
         },
         {
             "id": "gloriosos_1",
             "type": "mystery",
-            "src": "/audio/mysteries/gloriosos_1.mp3",
+            "src": "/rosario/audio/mysteries/gloriosos_1.mp3",
             "title": "1º Misterio Glorioso",
             "duration": 45
         },
         {
             "id": "gloriosos_2",
             "type": "mystery",
-            "src": "/audio/mysteries/gloriosos_2.mp3",
+            "src": "/rosario/audio/mysteries/gloriosos_2.mp3",
             "title": "2º Misterio Glorioso",
             "duration": 45
         },
         {
             "id": "gloriosos_3",
             "type": "mystery",
-            "src": "/audio/mysteries/gloriosos_3.mp3",
+            "src": "/rosario/audio/mysteries/gloriosos_3.mp3",
             "title": "3º Misterio Glorioso",
             "duration": 45
         },
         {
             "id": "gloriosos_4",
             "type": "mystery",
-            "src": "/audio/mysteries/gloriosos_4.mp3",
+            "src": "/rosario/audio/mysteries/gloriosos_4.mp3",
             "title": "4º Misterio Glorioso",
             "duration": 45
         },
         {
             "id": "gloriosos_5",
             "type": "mystery",
-            "src": "/audio/mysteries/gloriosos_5.mp3",
+            "src": "/rosario/audio/mysteries/gloriosos_5.mp3",
             "title": "5º Misterio Glorioso",
             "duration": 45
         },
         {
             "id": "luminosos_1",
             "type": "mystery",
-            "src": "/audio/mysteries/luminosos_1.mp3",
+            "src": "/rosario/audio/mysteries/luminosos_1.mp3",
             "title": "1º Misterio Luminoso",
             "duration": 45
         },
         {
             "id": "luminosos_2",
             "type": "mystery",
-            "src": "/audio/mysteries/luminosos_2.mp3",
+            "src": "/rosario/audio/mysteries/luminosos_2.mp3",
             "title": "2º Misterio Luminoso",
             "duration": 45
         },
         {
             "id": "luminosos_3",
             "type": "mystery",
-            "src": "/audio/mysteries/luminosos_3.mp3",
+            "src": "/rosario/audio/mysteries/luminosos_3.mp3",
             "title": "3º Misterio Luminoso",
             "duration": 45
         },
         {
             "id": "luminosos_4",
             "type": "mystery",
-            "src": "/audio/mysteries/luminosos_4.mp3",
+            "src": "/rosario/audio/mysteries/luminosos_4.mp3",
             "title": "4º Misterio Luminoso",
             "duration": 45
         },
         {
             "id": "luminosos_5",
             "type": "mystery",
-            "src": "/audio/mysteries/luminosos_5.mp3",
+            "src": "/rosario/audio/mysteries/luminosos_5.mp3",
             "title": "5º Misterio Luminoso",
             "duration": 45
         }
@@ -197,7 +197,7 @@
             "id": "rosario_gozosos",
             "type": "rosary",
             "mysterySetId": "gozosos",
-            "src": "/audio/rosarios/rosario-gozosos.mp3",
+            "src": "/rosario/audio/rosarios/rosario-gozosos.mp3",
             "title": "Rosario Completo - Misterios Gozosos",
             "duration": 1200
         },
@@ -205,7 +205,7 @@
             "id": "rosario_dolorosos",
             "type": "rosary",
             "mysterySetId": "dolorosos",
-            "src": "/audio/rosarios/rosario-dolorosos.mp3",
+            "src": "/rosario/audio/rosarios/rosario-dolorosos.mp3",
             "title": "Rosario Completo - Misterios Dolorosos",
             "duration": 1200
         },
@@ -213,7 +213,7 @@
             "id": "rosario_gloriosos",
             "type": "rosary",
             "mysterySetId": "gloriosos",
-            "src": "/audio/rosarios/rosario-gloriosos.mp3",
+            "src": "/rosario/audio/rosarios/rosario-gloriosos.mp3",
             "title": "Rosario Completo - Misterios Gloriosos",
             "duration": 1200
         },
@@ -221,7 +221,7 @@
             "id": "rosario_luminosos",
             "type": "rosary",
             "mysterySetId": "luminosos",
-            "src": "/audio/rosarios/rosario-luminosos.mp3",
+            "src": "/rosario/audio/rosarios/rosario-luminosos.mp3",
             "title": "Rosario Completo - Misterios Luminosos",
             "duration": 1200
         }
@@ -230,7 +230,7 @@
         {
             "id": "ave_maria_instrumental",
             "type": "music",
-            "src": "/audio/music/ave_maria_instrumental.mp3",
+            "src": "/rosario/audio/music/ave_maria_instrumental.mp3",
             "title": "Ave María Instrumental",
             "loop": true
         }
