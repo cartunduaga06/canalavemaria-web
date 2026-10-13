@@ -221,7 +221,15 @@ const Pray = () => {
         <div className="controls-area">
           {/* Auto Mode Controls */}
           {!isAutoMode ? (
-            <button onClick={startAutoMode} className="btn btn-primary w-full auto-start-btn">
+            <button
+              onClick={() => {
+                // Start the first audio inside the user's click gesture so mobile
+                // browsers do not classify it as unsolicited autoplay.
+                handleListenToPrayer();
+                startAutoMode();
+              }}
+              className="btn btn-primary w-full auto-start-btn"
+            >
               <Play size={20} fill="currentColor" /> Rezar Rosario automáticamente
             </button>
           ) : (
