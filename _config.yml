@@ -15,4 +15,11 @@ exclude:
   - README.md
   - Gemfile
   - Gemfile.lock
+  - AGENTS.md
+  - docs
+  - rosario-app
+  - reference
+  - node_modules
+  - package.json
+  - package-lock.json
 
