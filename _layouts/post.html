@@ -1,0 +1,6 @@
+---
+layout: default
+---
+<article class="contenido"><div class="contenedor"><div class="contenido__cuerpo"><p><time datetime="{{ page.date | date_to_xmlschema }}">{{ page.date | date: '%d/%m/%Y' }}</time></p><h1>{{ page.title }}</h1><iframe class="video-embed" src="https://www.youtube-nocookie.com/embed/{{ page.youtube_id }}" title="{{ page.title }}" loading="lazy" allowfullscreen></iframe><p>{{ page.description }}</p><p><a class="boton" href="{% if page.kind == 'short' %}https://www.youtube.com/shorts/{{ page.youtube_id }}{% else %}https://www.youtube.com/watch?v={{ page.youtube_id }}{% endif %}">Ver en YouTube</a></p>{% if page.tags %}<div class="etiquetas">{% for tag in page.tags %}<span class="etiqueta">#{{ tag }}</span>{% endfor %}</div>{% endif %}</div></div></article>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"VideoObject","name":{{ page.title | jsonify }},"description":{{ page.description | jsonify }},"thumbnailUrl":["https://i.ytimg.com/vi/{{ page.youtube_id }}/hqdefault.jpg"],"uploadDate":"{{ page.date | date_to_xmlschema }}","embedUrl":"https://www.youtube-nocookie.com/embed/{{ page.youtube_id }}","contentUrl":"https://www.youtube.com/watch?v={{ page.youtube_id }}"}</script>
+

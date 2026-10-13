@@ -1,0 +1,7 @@
+---
+layout: pagina
+title: Vídeos católicos
+permalink: /videos/
+---
+<div class="video-grid">{% for post in site.posts %}<article class="video-card"><a href="{{ post.url | relative_url }}"><div class="video-card__thumb" aria-hidden="true">▶</div><div class="video-card__body"><h3>{{ post.title }}</h3><p>{{ post.description }}</p></div></a></article>{% endfor %}</div>
+

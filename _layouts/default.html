@@ -1,0 +1,7 @@
+<!doctype html><html lang="{{ site.lang | default: 'es' }}"><head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>{% if page.title %}{{ page.title }} · {% endif %}{{ site.title }}</title>
+<meta name="description" content="{{ page.description | default: site.description }}"><link rel="canonical" href="{{ page.url | absolute_url }}">
+<meta property="og:type" content="website"><meta property="og:title" content="{% if page.title %}{{ page.title }} · {% endif %}{{ site.title }}"><meta property="og:description" content="{{ page.description | default: site.description }}"><meta property="og:url" content="{{ page.url | absolute_url }}">
+<link rel="stylesheet" href="{{ '/assets/css/estilos.css' | relative_url }}">{% feed_meta %}{% seo %}</head><body>{% include cabecera.html %}<main>{{ content }}</main>{% include pie.html %}</body></html>
+

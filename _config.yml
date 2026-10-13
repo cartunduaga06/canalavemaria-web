@@ -1,0 +1,18 @@
+lang: es
+title: Ave María TV
+description: Canal católico de fe y oración.
+url: https://canalavemaria.com
+baseurl: ""
+permalink: /videos/:year/:month/:day/:title/
+collections:
+  drafts:
+    output: false
+plugins:
+  - jekyll-feed
+  - jekyll-sitemap
+exclude:
+  - scripts
+  - README.md
+  - Gemfile
+  - Gemfile.lock
+

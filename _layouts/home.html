@@ -1,0 +1,7 @@
+---
+layout: default
+---
+<section class="hero"><div class="contenedor"><h1>Una comunidad unida en <span>fe</span></h1><p>Ave María TV, tu hogar espiritual donde encontrarás oraciones, reflexiones y la compañía de los santos.</p><a class="boton boton--dorado" href="{{ '/videos/' | relative_url }}">Ver vídeos católicos</a></div></section>
+<section class="seccion seccion--azul"><div class="contenedor"><div class="encabezado-seccion"><h2>Fortalece tu fe cada día</h2><p>Contenido para acompañarte en tu camino espiritual.</p></div><div class="tarjetas"><article class="tarjeta"><h3>Oración diaria</h3><p>Encuentra un momento de paz y conexión con Dios.</p></article><article class="tarjeta"><h3>Palabra y reflexión</h3><p>Mensajes para vivir el Evangelio en la vida cotidiana.</p></article><article class="tarjeta"><h3>Comunidad de fe</h3><p>Crece acompañado por Ave María TV.</p></article></div></div></section>
+<section class="seccion"><div class="contenedor"><div class="encabezado-seccion"><h2>Vídeos recientes</h2><p>Shorts y vídeos católicos para tu día.</p></div><div class="video-grid">{% assign recientes = site.posts | limit: 12 %}{% for post in recientes %}<article class="video-card"><a href="{{ post.url | relative_url }}"><div class="video-card__thumb" aria-hidden="true">▶</div><div class="video-card__body"><h3>{{ post.title }}</h3><p>{{ post.description }}</p></div></a></article>{% endfor %}</div></div></section>
+
