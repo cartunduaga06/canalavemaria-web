@@ -8,16 +8,15 @@ const Layout = () => {
       <header className="app-header">
         <div className="container">
           <nav className="nav-bar">
-            <Link to="/" className="logo">
-              Ave María
-            </Link>
-            {/* Simple mobile nav for MVP */}
+            <a href="/" className="logo">
+              ✦ Ave María TV
+            </a>
             <div className="nav-links">
-              <Link to="/rezar" className="nav-item">Rezar</Link>
-              <Link to="/guia" className="nav-item">Guía</Link>
-              <Link to="/admin/login" className="nav-item admin-link" title="Panel de Administración">
-                <Settings size={18} />
-              </Link>
+              <a href="/" className="nav-item">Inicio</a>
+              <a href="/videos/" className="nav-item">Vídeos</a>
+              <a href="/oraciones/" className="nav-item">Oraciones</a>
+              <a href="/rosario/" className="nav-item" aria-current="page">Rezar</a>
+              <a href="/contacto/" className="nav-item">Contacto</a>
             </div>
           </nav>
         </div>
