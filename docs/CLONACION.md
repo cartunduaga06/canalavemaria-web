@@ -22,6 +22,7 @@ El proyecto descargado incluye formularios que guardan nombres, correos y mensaj
 - Confirmar si la imagen de portada y las imágenes de santos pueden redistribuirse localmente; el ZIP de Horizons solo contiene sus URLs.
 - Completar Santos y Blog con el contenido definitivo; por ahora sus páginas incluyen `TODO:`.
 - Confirmar las URL de compra del devocionario y el pack de imágenes, y la URL de donación. Los controles de Recursos se muestran solo como referencia visual y no procesan pagos ni redirigen.
+- Confirmar correo, teléfono, WhatsApp y horario de atención. El formulario de Contacto no guarda ni envía datos hasta disponer de un medio de recepción autorizado.
 - Comparar capturas de Playwright en 390, 820 y 1440 px cuando esté disponible un navegador.
 
 ## Contrato de cabeceras
