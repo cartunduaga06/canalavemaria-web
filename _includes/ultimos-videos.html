@@ -1,0 +1,23 @@
+{% if site.posts.size > 0 %}
+<section class="seccion ultimos-videos" aria-labelledby="ultimos-videos-titulo">
+  <div class="contenedor">
+    <div class="encabezado-seccion">
+      <h2 id="ultimos-videos-titulo">Últimos vídeos</h2>
+    </div>
+    <div class="ultimos-videos__rejilla">
+      {% for post in site.posts limit:12 %}
+      <article class="ultimos-videos__tarjeta">
+        <a class="ultimos-videos__enlace" href="{{ post.url | relative_url }}">
+          <img class="ultimos-videos__miniatura" src="https://i.ytimg.com/vi/{{ post.youtube_id }}/hqdefault.jpg" loading="lazy" alt="{{ post.title | escape }}">
+          <div class="ultimos-videos__cuerpo">
+            <span class="ultimos-videos__tipo">{% if post.kind == 'short' %}Short{% else %}Vídeo{% endif %}</span>
+            <time datetime="{{ post.date | date_to_xmlschema }}">{{ post.date | date: '%d/%m/%Y' }}</time>
+            <h3>{{ post.title }}</h3>
+          </div>
+        </a>
+      </article>
+      {% endfor %}
+    </div>
+  </div>
+</section>
+{% endif %}

@@ -4,7 +4,7 @@ from pathlib import Path
 import re, subprocess, sys
 
 ROOT = Path(__file__).resolve().parents[1]
-REQUIRED = ["_config.yml", "CNAME", "index.html", "_layouts/default.html", "_layouts/home.html", "_layouts/post.html", "_layouts/pagina.html", "_layouts/wide.html", "_includes/cabecera.html", "_includes/pie.html", "assets/css/estilos.css"]
+REQUIRED = ["_config.yml", "CNAME", "index.html", "_layouts/default.html", "_layouts/home.html", "_layouts/post.html", "_layouts/pagina.html", "_layouts/wide.html", "_includes/cabecera.html", "_includes/pie.html", "_includes/ultimos-videos.html", "assets/css/estilos.css"]
 FIELDS = ["title", "date", "kind", "youtube_id", "passage", "description", "tags"]
 LEGAL_PHRASES = {
     "privacidad/index.html": ["carlosandresproyectos@gmail.com", "uso limitado", "myaccount.google.com/permissions"],
@@ -25,6 +25,21 @@ def main():
     warnings = []
     for item in REQUIRED:
         if not (ROOT / item).exists(): errors.append(f"falta {item}")
+    for item in ("_layouts/home.html", "videos/index.html"):
+        path = ROOT / item
+        if path.exists() and "include ultimos-videos.html" not in path.read_text(encoding="utf-8"):
+            errors.append(f"{item}: falta include ultimos-videos.html")
+    post_layout = ROOT / "_layouts/post.html"
+    if post_layout.exists() and "{{ content }}" not in post_layout.read_text(encoding="utf-8"):
+        errors.append("_layouts/post.html: falta {{ content }}")
+    for item in ("_includes/ultimos-videos.html", "_layouts/home.html", "videos/index.html", "_layouts/post.html"):
+        path = ROOT / item
+        if not path.exists(): continue
+        text = path.read_text(encoding="utf-8")
+        for opening, closing in (("if", "endif"), ("for", "endfor"), ("raw", "endraw")):
+            opens = len(re.findall(r"{%[-]?\s*" + opening + r"\b", text))
+            closes = len(re.findall(r"{%[-]?\s*" + closing + r"\b", text))
+            if opens != closes: errors.append(f"{item}: etiquetas Liquid {opening}/{closing} desequilibradas ({opens}/{closes})")
     posts = list((ROOT / "_posts").glob("*.md"))
     for post in posts:
         text = post.read_text(encoding="utf-8")
