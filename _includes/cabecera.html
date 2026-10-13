@@ -1,13 +1,22 @@
 <header class="cabecera">
   <div class="contenedor cabecera__interior">
-    <a class="marca" href="{{ '/' | relative_url }}" aria-label="Ave María TV, inicio"><span class="marca__icono" aria-hidden="true">✦</span><span>Ave María TV</span></a>
+    <a class="marca" href="{{ '/' | relative_url }}" aria-label="Ave María TV, inicio">
+      <span class="marca__icono" aria-hidden="true">AM</span>
+      <span class="marca__texto"><strong>Ave María TV</strong><small>Comunidad de Fe</small></span>
+    </a>
     <nav class="nav" aria-label="Navegación principal">
-      <a href="{{ '/' | relative_url }}">Inicio</a>
-      <a href="{{ '/videos/' | relative_url }}">Vídeos</a>
+      <a class="nav__activo" href="{{ '/' | relative_url }}">Inicio</a>
+      <a href="{{ '/santos/' | relative_url }}">Santos</a>
       <a href="{{ '/oraciones/' | relative_url }}">Oraciones</a>
-      <a href="{{ '/rosario/' | relative_url }}">Rezar</a>
+      <a href="{{ '/videos/' | relative_url }}">Vídeos</a>
+      <a href="{{ '/blog/' | relative_url }}">Blog</a>
+      <a href="{{ '/productos/' | relative_url }}">Recursos</a>
       <a href="{{ '/contacto/' | relative_url }}">Contacto</a>
     </nav>
+    <div class="social" aria-label="Redes sociales">
+      <a href="https://www.youtube.com/@CanalAveMariaOficial" aria-label="YouTube">▶</a>
+      <a href="https://www.instagram.com/" aria-label="Instagram">◎</a>
+    </div>
   </div>
 </header>
 
