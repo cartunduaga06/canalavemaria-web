@@ -4,7 +4,7 @@ from pathlib import Path
 import re, subprocess, sys
 
 ROOT = Path(__file__).resolve().parents[1]
-REQUIRED = ["_config.yml", "CNAME", "index.html", "_layouts/default.html", "_layouts/home.html", "_layouts/post.html", "_layouts/pagina.html", "_includes/cabecera.html", "_includes/pie.html", "assets/css/estilos.css"]
+REQUIRED = ["_config.yml", "CNAME", "index.html", "_layouts/default.html", "_layouts/home.html", "_layouts/post.html", "_layouts/pagina.html", "_layouts/wide.html", "_includes/cabecera.html", "_includes/pie.html", "assets/css/estilos.css"]
 FIELDS = ["title", "date", "kind", "youtube_id", "passage", "description", "tags"]
 
 def frontmatter(path):
