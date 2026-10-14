@@ -11,9 +11,6 @@ LEGAL_PHRASES = {
     "terminos/index.html": ["carlosandresproyectos@gmail.com", "tal cual", "myaccount.google.com/permissions"],
 }
 YOUTUBE_ID = re.compile(r"^[A-Za-z0-9_-]{11}$")
-THUMBNAIL = re.compile(r"^/assets/img/miniaturas/([A-Za-z0-9_-]+)\.webp$")
-FALLBACK = "assets/img/miniaturas/fallback.webp"
-MAX_THUMBNAIL_BYTES = 300 * 1024
 
 
 def frontmatter(path):
@@ -21,43 +18,6 @@ def frontmatter(path):
     if not text.startswith("---\n"): return {}
     end = text.find("\n---", 4)
     return {m.group(1): m.group(2).strip().strip("\"'") for m in re.finditer(r"^([A-Za-z_]+):\s*(.*)$", text[4:end], re.M)}
-
-
-def webp_dimensions(data):
-    """Return dimensions from a VP8, VP8L or VP8X chunk."""
-    if len(data) < 12 or data[:4] != b"RIFF" or data[8:12] != b"WEBP":
-        return None
-    offset = 12
-    while offset + 8 <= len(data):
-        kind = data[offset:offset + 4]
-        size = int.from_bytes(data[offset + 4:offset + 8], "little")
-        chunk = data[offset + 8:offset + 8 + size]
-        if len(chunk) != size:
-            return None
-        if kind == b"VP8X" and size >= 10:
-            return (1 + int.from_bytes(chunk[4:7], "little"), 1 + int.from_bytes(chunk[7:10], "little"))
-        if kind == b"VP8 " and size >= 10 and chunk[3:6] == b"\x9d\x01\x2a":
-            return (int.from_bytes(chunk[6:8], "little") & 0x3fff, int.from_bytes(chunk[8:10], "little") & 0x3fff)
-        if kind == b"VP8L" and size >= 5 and chunk[0] == 0x2f:
-            bits = int.from_bytes(chunk[1:5], "little")
-            return ((bits & 0x3fff) + 1, ((bits >> 14) & 0x3fff) + 1)
-        offset += 8 + size + (size & 1)
-    return None
-
-
-def check_thumbnail(path, label, errors):
-    if not path.is_file():
-        errors.append(f"{label}: fichero de miniatura inexistente")
-        return
-    data = path.read_bytes()
-    if len(data) < 12 or data[:4] != b"RIFF" or data[8:12] != b"WEBP":
-        errors.append(f"{label}: firma RIFF....WEBP inválida")
-        return
-    if len(data) > MAX_THUMBNAIL_BYTES:
-        errors.append(f"{label}: supera 300 KB")
-    dimensions = webp_dimensions(data)
-    if dimensions != (1280, 720):
-        errors.append(f"{label}: dimensiones WebP inválidas ({dimensions or 'cabecera VP8/VP8L/VP8X inválida'}; se requieren 1280x720)")
 
 
 def main(root=None):
@@ -91,15 +51,6 @@ def main(root=None):
         if "TODO" in text: errors.append(f"{post}: contiene TODO")
         if "youtube_id" in data and (not YOUTUBE_ID.fullmatch(data["youtube_id"]) or data["youtube_id"] == "dQw4w9WgXcQ"):
             errors.append(f"{post}: youtube_id inválido o de ejemplo")
-        thumbnail = data.get("thumbnail")
-        if thumbnail is not None:
-            if not THUMBNAIL.fullmatch(thumbnail) or ".." in thumbnail:
-                errors.append(f"{post}: thumbnail inválida; se requiere /assets/img/miniaturas/<nombre>.webp")
-            else:
-                check_thumbnail(root / thumbnail.lstrip("/"), f"{post}: thumbnail", errors)
-        if re.match(r"^https?://", data.get("image", ""), re.I):
-            warnings.append(f"{post.relative_to(root)}: image: remota es legado")
-    check_thumbnail(root / FALLBACK, FALLBACK, errors)
     config = (root / "_config.yml").read_text(encoding="utf-8") if (root / "_config.yml").exists() else ""
     exclude_match = re.search(r"(?ms)^exclude:\s*\n((?:\s+-.*\n?)*)", config)
     excluded = set(re.findall(r"^\s+-\s+([^\s#]+)", exclude_match.group(1), re.M)) if exclude_match else set()
@@ -139,11 +90,10 @@ def main(root=None):
         try: text = path.read_text(encoding="utf-8")
         except UnicodeDecodeError: continue
         rel = path.relative_to(root)
-        if "i.ytimg.com" in text: errors.append(f"{rel}: contiene i.ytimg.com")
         if re.search(r"<iframe\b", text, re.I): errors.append(f"{rel}: contiene <iframe literal")
         if re.search(r"<script\b[^>]*\bsrc\s*=\s*['\"]https?://", text, re.I): errors.append(f"{rel}: contiene script externo")
     if warnings:
-        print("AVISO: " + ", ".join(sorted(warnings)))
+        print("AVISO: archivos publicados con TODO: " + ", ".join(sorted(warnings)))
     if errors:
         print("VALIDACIÓN FALLIDA")
         print("\n".join(f"- {error}" for error in errors)); return 1

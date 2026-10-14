@@ -1,5 +1,0 @@
-{%- comment -%}Metadatos propios de la entrada: el plugin SEO toma `image:` del front matter, que en entradas antiguas es remoto.{%- endcomment -%}
-{%- assign miniatura_url = page.thumbnail | default: '/assets/img/miniaturas/fallback.webp' | absolute_url -%}
-<meta property="og:site_name" content="{{ site.title | escape }}">
-<meta property="og:image" content="{{ miniatura_url }}"><meta property="og:image:width" content="1280"><meta property="og:image:height" content="720">
-<meta name="twitter:card" content="summary_large_image"><meta name="twitter:title" content="{{ page.title | escape }}"><meta name="twitter:description" content="{{ page.description | escape }}"><meta name="twitter:image" content="{{ miniatura_url }}">

@@ -29,13 +29,3 @@ El proyecto descargado incluye formularios que guardan nombres, correos y mensaj
 ## Contrato de cabeceras
 
 Cada entrada en `_posts/` debe incluir `title`, `date`, `kind` (`short` o `video`), `youtube_id`, `passage`, `description` y `tags`. Los borradores viven en `_drafts/` y no se publican.
-
-## Miniaturas
-
-El campo opcional `thumbnail` en el front matter de un post indica su miniatura local, con la forma `/assets/img/miniaturas/<nombre>.webp`. Si se omite, el sitio usa `/assets/img/miniaturas/fallback.webp`; por ello, los posts históricos siguen siendo válidos sin añadir el campo. Para trabajos generados se usa `<job_id>.webp`, que se renombra a `<youtube_id>.webp` al asociarlo al vídeo.
-
-Las miniaturas y el fallback deben ser WebP de 1280×720, pesar como máximo 300 KB y tener una cabecera RIFF/WEBP válida. El validador comprueba la ruta y el nombre permitidos, la existencia del fichero, su firma, tamaño y dimensiones, y exige que exista el fallback. También prohíbe referencias a `i.ytimg.com`, etiquetas `<iframe` literales y scripts externos en layouts, includes y páginas publicadas. Una URL remota en el campo heredado `image:` genera un aviso; ese dato es legado y se retirará en AI-97.
-
-Antes de publicar imágenes generadas hay que resolver su procedencia y licencia: SD-Turbo es de uso no comercial, así que no se deben publicar imágenes generadas sin resolver la licencia (ver AI-46/AI-82).
-
-Para revertir una miniatura concreta, borra la línea `thumbnail` del post o elimina su fichero; el sitio volverá a usar el fallback.
