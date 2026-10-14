@@ -5,3 +5,4 @@ rosario-app/dist/
 !.env.example
 _site/
 .jekyll-cache/
+__pycache__/

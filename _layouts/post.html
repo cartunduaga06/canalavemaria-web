@@ -1,5 +1,30 @@
 ---
 layout: default
 ---
-<article class="contenido"><div class="contenedor"><div class="contenido__cuerpo"><p><time datetime="{{ page.date | date_to_xmlschema }}">{{ page.date | date: '%d/%m/%Y' }}</time></p><h1>{{ page.title }}</h1><iframe class="video-embed{% if page.kind == 'short' %} video-embed--short{% endif %}" src="https://www.youtube-nocookie.com/embed/{{ page.youtube_id }}" title="{{ page.title }}" loading="lazy" allowfullscreen></iframe><div class="video-descripcion">{{ content }}</div><p><a class="boton" href="{% if page.kind == 'short' %}https://www.youtube.com/shorts/{{ page.youtube_id }}{% else %}https://www.youtube.com/watch?v={{ page.youtube_id }}{% endif %}">Ver en YouTube</a></p>{% if page.tags %}<div class="etiquetas">{% for tag in page.tags %}<span class="etiqueta">#{{ tag }}</span>{% endfor %}</div>{% endif %}</div></div></article>
-<script type="application/ld+json">{"@context":"https://schema.org","@type":"VideoObject","name":{{ page.title | jsonify }},"description":{{ page.description | jsonify }},"thumbnailUrl":["https://i.ytimg.com/vi/{{ page.youtube_id }}/hqdefault.jpg"],"uploadDate":"{{ page.date | date_to_xmlschema }}","embedUrl":"https://www.youtube-nocookie.com/embed/{{ page.youtube_id }}","contentUrl":"https://www.youtube.com/watch?v={{ page.youtube_id }}"}</script>
+{%- assign miniatura = page.thumbnail | default: '/assets/img/miniaturas/fallback.webp' -%}
+{%- if page.kind == 'short' %}{% assign url_youtube = 'https://www.youtube.com/shorts/' | append: page.youtube_id %}{% else %}{% assign url_youtube = 'https://www.youtube.com/watch?v=' | append: page.youtube_id %}{% endif -%}
+<article class="contenido"><div class="contenedor"><div class="contenido__cuerpo"><p><time datetime="{{ page.date | date_to_xmlschema }}">{{ page.date | date: '%d/%m/%Y' }}</time></p><h1>{{ page.title }}</h1>
+<a class="reproductor{% if page.kind == 'short' %} reproductor--short{% endif %}" href="{{ url_youtube }}" data-embed="https://www.youtube-nocookie.com/embed/{{ page.youtube_id }}?autoplay=1" data-titulo="{{ page.title | escape }}">
+<img class="reproductor__imagen" src="{{ miniatura | relative_url }}" width="1280" height="720" decoding="async" alt="Miniatura del vídeo: {{ page.title | escape }}">
+<span class="reproductor__boton"><span class="reproductor__icono" aria-hidden="true"></span><span class="reproductor__texto">Reproducir vídeo</span></span>
+</a>
+<p class="reproductor__nota">El vídeo se carga desde YouTube solo cuando pulsas reproducir.</p>
+<div class="video-descripcion">{{ content }}</div><p><a class="boton" href="{{ url_youtube }}">Ver en YouTube</a></p>{% if page.tags %}<div class="etiquetas">{% for tag in page.tags %}<span class="etiqueta">#{{ tag }}</span>{% endfor %}</div>{% endif %}</div></div></article>
+<script>
+document.querySelectorAll('a.reproductor[data-embed]').forEach(function (enlace) {
+  enlace.addEventListener('click', function (evento) {
+    evento.preventDefault();
+    var marco = document.createElement('iframe');
+    marco.className = 'video-embed' + (enlace.classList.contains('reproductor--short') ? ' video-embed--short' : '');
+    marco.src = enlace.dataset.embed;
+    marco.title = enlace.dataset.titulo;
+    marco.allow = 'autoplay; encrypted-media; picture-in-picture';
+    marco.allowFullscreen = true;
+    enlace.replaceWith(marco);
+    var nota = document.querySelector('.reproductor__nota');
+    if (nota) nota.remove();
+    marco.focus();
+  });
+});
+</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"VideoObject","name":{{ page.title | jsonify }},"description":{{ page.description | jsonify }},"thumbnailUrl":[{{ miniatura | absolute_url | jsonify }}],"uploadDate":"{{ page.date | date_to_xmlschema }}","embedUrl":"https://www.youtube-nocookie.com/embed/{{ page.youtube_id }}","contentUrl":{{ url_youtube | jsonify }}}</script>
