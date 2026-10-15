@@ -1,6 +1,7 @@
 #!/usr/bin/env python3
 """Validación sin dependencias externas para el sitio Jekyll."""
 from pathlib import Path
+from html.parser import HTMLParser
 import re, subprocess, sys
 
 ROOT = Path(__file__).resolve().parents[1]
@@ -10,6 +11,27 @@ LEGAL_PHRASES = {
     "privacidad/index.html": ["carlosandresproyectos@gmail.com", "uso limitado", "myaccount.google.com/permissions"],
     "terminos/index.html": ["carlosandresproyectos@gmail.com", "tal cual", "myaccount.google.com/permissions"],
 }
+GENERATED = {"_site", ".jekyll-cache", ".bundle", "vendor"}
+
+
+class References(HTMLParser):
+    """Inspect HTML tags, including unquoted and protocol-relative sources."""
+    def __init__(self):
+        super().__init__()
+        self.iframe = False
+        self.external_script = False
+
+    def handle_starttag(self, tag, attrs):
+        if tag == "iframe":
+            self.iframe = True
+        if tag == "script":
+            src = dict(attrs).get("src", "") or ""
+            if src.strip().lower().startswith(("https://", "http://", "//")):
+                self.external_script = True
+
+    handle_startendtag = handle_starttag
+
+
 YOUTUBE_ID = re.compile(r"^[A-Za-z0-9_-]{11}$")
 
 
@@ -68,14 +90,14 @@ def main(root=None):
     for target in ("/privacidad/", "/terminos/"):
         if target not in footer: errors.append(f"el pie no enlaza {target}")
     for html in root.rglob("*.html"):
-        if any(part in {".git", "reference", "node_modules", "rosario-app"} for part in html.parts): continue
+        if any(part in GENERATED | {".git", "reference", "node_modules", "rosario-app"} for part in html.relative_to(root).parts): continue
         text = html.read_text(encoding="utf-8")
         for href in re.findall(r'href=["\'](/[A-Za-z0-9_./-]+/?)', text):
             if href in {"/", "/assets/css/estilos.css"}: continue
             if not any((root / href.strip("/")).exists() or (root / href.strip("/") / "index.html").exists() for _ in [0]):
                 if not href.startswith("/videos/"): errors.append(f"{html}: enlace interno no encontrado {href}")
     for path in root.rglob("*"):
-        if not path.is_file() or any(part in {".git", "reference", "node_modules", "rosario-app", "_drafts"} for part in path.parts): continue
+        if not path.is_file() or any(part in GENERATED | {".git", "reference", "node_modules", "rosario-app", "_drafts"} for part in path.relative_to(root).parts): continue
         if path.name == "AGENTS.md" or "docs" in path.parts: continue
         if path.suffix.lower() not in {".html", ".md", ".xml", ".txt"}: continue
         try: text = path.read_text(encoding="utf-8")
@@ -83,15 +105,17 @@ def main(root=None):
         if "TODO" in text and path not in [root / p for p in LEGAL_PHRASES] and "_posts" not in path.parts:
             warnings.append(str(path.relative_to(root)))
     for path in root.rglob("*"):
-        if not path.is_file() or any(part in {".git", "reference", "node_modules", "rosario-app", "docs", "_drafts", "_posts", "scripts"} for part in path.parts):
+        if not path.is_file() or any(part in GENERATED | {".git", "reference", "node_modules", "rosario-app", "docs", "_drafts", "scripts"} for part in path.relative_to(root).parts):
             continue
         if path.parent.name not in {"_layouts", "_includes"} and path.suffix.lower() not in {".html", ".md"}:
             continue
         try: text = path.read_text(encoding="utf-8")
         except UnicodeDecodeError: continue
         rel = path.relative_to(root)
-        if re.search(r"<iframe\b", text, re.I): errors.append(f"{rel}: contiene <iframe literal")
-        if re.search(r"<script\b[^>]*\bsrc\s*=\s*['\"]https?://", text, re.I): errors.append(f"{rel}: contiene script externo")
+        refs = References()
+        refs.feed(text)
+        if refs.iframe: errors.append(f"{rel}: contiene <iframe literal")
+        if refs.external_script: errors.append(f"{rel}: contiene script externo")
     if warnings:
         print("AVISO: archivos publicados con TODO: " + ", ".join(sorted(warnings)))
     if errors:
@@ -101,10 +125,11 @@ def main(root=None):
     if root != ROOT:
         return 0
     try:
-        subprocess.run(["bundle", "exec", "jekyll", "build"], cwd=root, check=True)
+        subprocess.run(["bundle", "exec", "jekyll", "build", "--strict_front_matter"], cwd=root, check=True)
         print("Jekyll build OK")
     except FileNotFoundError:
-        print("AVISO: Ruby/Jekyll no está instalado; se omitió bundle exec jekyll build")
+        print("ERROR: falta bundle; el build real de Jekyll es obligatorio")
+        return 1
     except subprocess.CalledProcessError:
         print("Jekyll build falló")
         return 1
