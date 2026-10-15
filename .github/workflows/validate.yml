@@ -1,0 +1,33 @@
+name: Validate Jekyll
+on:
+  pull_request:
+    branches: [feat/integrar-rosario]
+permissions:
+  contents: read
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - uses: ruby/setup-ruby@v1
+        with:
+          ruby-version: '3.1'
+          bundler-cache: true
+      - run: python3 -m unittest scripts/test_validate.py
+      - run: python3 scripts/validate.py
+      - name: Check the validator after a build
+        run: python3 scripts/validate.py
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Install isolated browser test tools
+        run: |
+          npm install --prefix "$RUNNER_TEMP/ai95" --no-audit --no-fund playwright-core@1.63.0
+          "$RUNNER_TEMP/ai95/node_modules/.bin/playwright-core" install --with-deps chromium
+      - name: Test the generated player
+        env:
+          NODE_PATH: ${{ runner.temp }}/ai95/node_modules
+        run: node scripts/test_player.cjs

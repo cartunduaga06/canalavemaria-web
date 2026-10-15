@@ -122,3 +122,14 @@ a:focus-visible, button:focus-visible { outline: 3px solid #f59e0b; outline-offs
 @media (max-width: 1000px) { .social { display: none; } .cabecera__interior { flex-wrap: wrap; padding: .5rem 0; } .nav { width: 100%; order: 2; justify-content: center; } }
 @media (max-width: 800px) { .tarjetas, .video-grid, .blog-grid, .recursos-grid { grid-template-columns: repeat(2, 1fr); } .contacto-grid { grid-template-columns: 1fr; } .pie__grid { grid-template-columns: 1fr 1fr; } }
 @media (max-width: 560px) { .contenedor { width: min(100% - 1.25rem, 1120px); } .cabecera__interior { min-height: 64px; } .marca__texto small { display: none; } .nav { justify-content: flex-start; flex-wrap: nowrap; overflow-x: auto; padding-bottom: .2rem; font-size: .78rem; scrollbar-width: thin; } .nav a { flex: 0 0 auto; padding: .45rem .55rem; } .hero { padding: 1rem 0 2.5rem; } .hero__tarjeta { padding: 1rem; } .hero__imagen { height: 12rem; } .hero h1 { font-size: 2rem; } .hero p { font-size: .95rem; } .tarjetas, .video-grid, .blog-grid, .recursos-grid, .catalogo-videos__grid, .pie__grid { grid-template-columns: 1fr; } .pie__legal { flex-direction: column; } }
+.reproductor { position: relative; display: block; overflow: hidden; width: 100%; aspect-ratio: 16 / 9; border-radius: var(--radio); background: #0b1120; color: var(--blanco); text-decoration: none; box-shadow: var(--sombra); }
+.reproductor--short { width: min(100%, 560px); margin-inline: auto; }
+.reproductor__imagen { display: block; width: 100%; height: 100%; object-fit: cover; }
+.reproductor::after { content: ""; position: absolute; inset: 0; background: linear-gradient(to top, rgb(11 17 32 / .7), transparent 55%); }
+.reproductor__boton { position: absolute; z-index: 1; left: 1rem; bottom: 1rem; display: inline-flex; align-items: center; gap: .75rem; border-radius: 999px; padding: .45rem 1.1rem .45rem .45rem; background: rgb(23 37 84 / .92); font-weight: 600; transition: background .2s; }
+.reproductor:hover .reproductor__boton { background: var(--azul); }
+.reproductor:focus-visible { outline: 3px solid #f59e0b; outline-offset: 4px; }
+.reproductor__icono { display: grid; place-items: center; width: 3.25rem; height: 3.25rem; border-radius: 50%; background: var(--dorado-claro); }
+.reproductor__icono::before { content: ""; margin-left: .2rem; border-style: solid; border-width: .6rem 0 .6rem 1rem; border-color: transparent transparent transparent var(--azul-oscuro); }
+.reproductor__nota { margin: .6rem 0 0; color: var(--muted); font-size: .85rem; text-align: center; }
+@media (prefers-reduced-motion: reduce) { .reproductor__boton { transition: none; } }
