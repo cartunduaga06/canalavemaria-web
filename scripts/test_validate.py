@@ -25,7 +25,7 @@ class ValidateTests(unittest.TestCase):
         (self.root / "_layouts/post.html").write_text("{{ content }}", encoding="utf-8")
         (self.root / "_includes/ultimos-videos.html").write_text("", encoding="utf-8")
         (self.root / "_includes/pie.html").write_text("/privacidad/ /terminos/", encoding="utf-8")
-        (self.root / "_config.yml").write_text("exclude:\n  - AGENTS.md\n  - docs\n  - rosario-app\n", encoding="utf-8")
+        (self.root / "_config.yml").write_text("exclude:\n  - AGENTS.md\n  - docs\n  - rosario-app\n  - vendor\n", encoding="utf-8")
         for page, phrases in validate.LEGAL_PHRASES.items():
             text = "---\nlayout: page\n---\n" + " ".join(phrases)
             (self.root / page).write_text(text, encoding="utf-8")
@@ -91,6 +91,13 @@ class ValidateTests(unittest.TestCase):
                 validate.subprocess, "run",
                 side_effect=validate.subprocess.CalledProcessError(1, "bundle")):
             self.assertEqual(self.run_validator()[0], 1)
+
+    def test_gem_dependencies_must_be_excluded_from_jekyll(self):
+        config = self.root / "_config.yml"
+        config.write_text(config.read_text().replace("  - vendor\n", ""), encoding="utf-8")
+        code, output = self.run_validator()
+        self.assertEqual(code, 1)
+        self.assertIn("_config.yml no excluye vendor", output)
 
 
 if __name__ == "__main__":

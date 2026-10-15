@@ -76,7 +76,7 @@ def main(root=None):
     config = (root / "_config.yml").read_text(encoding="utf-8") if (root / "_config.yml").exists() else ""
     exclude_match = re.search(r"(?ms)^exclude:\s*\n((?:\s+-.*\n?)*)", config)
     excluded = set(re.findall(r"^\s+-\s+([^\s#]+)", exclude_match.group(1), re.M)) if exclude_match else set()
-    for required_exclude in ("AGENTS.md", "docs", "rosario-app"):
+    for required_exclude in ("AGENTS.md", "docs", "rosario-app", "vendor"):
         if required_exclude not in excluded: errors.append(f"_config.yml no excluye {required_exclude}")
     for page, phrases in LEGAL_PHRASES.items():
         path = root / page
