@@ -1,4 +1,5 @@
 ---
+layout: santo
 title: "Vida de San Antonio de Padua"
 santo: "San Antonio de Padua"
 date: 2026-10-16 00:39:14 +0000
