@@ -1,4 +1,5 @@
 ---
+layout: santo
 title: "Vida de San Francisco de Asís"
 santo: "San Francisco de Asís"
 date: 2026-10-15 13:04:35 +0000
