@@ -1,7 +1,7 @@
 name: Validate Jekyll
 on:
   pull_request:
-    branches: [feat/integrar-rosario]
+    branches: [main, feat/integrar-rosario]
 permissions:
   contents: read
 jobs:

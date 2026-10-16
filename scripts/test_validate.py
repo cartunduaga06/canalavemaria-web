@@ -13,13 +13,14 @@ class ValidateTests(unittest.TestCase):
     def setUp(self):
         self.temp = tempfile.TemporaryDirectory()
         self.root = Path(self.temp.name)
-        for folder in ("_posts", "_layouts", "_includes", "privacidad", "terminos"):
+        for folder in ("_posts", "_layouts", "_includes", "privacidad", "terminos", "santos"):
             (self.root / folder).mkdir(parents=True, exist_ok=True)
         for item in validate.REQUIRED:
             path = self.root / item
             path.parent.mkdir(parents=True, exist_ok=True)
             path.write_text("", encoding="utf-8")
-        (self.root / "_layouts/home.html").write_text("include ultimos-videos.html", encoding="utf-8")
+        (self.root / "_layouts/home.html").write_text("include ultimos-videos.html {% include santo-hoy.html %}", encoding="utf-8")
+        (self.root / "santos/index.html").write_text("site.santos", encoding="utf-8")
         (self.root / "videos").mkdir(exist_ok=True)
         (self.root / "videos/index.html").write_text("include ultimos-videos.html", encoding="utf-8")
         (self.root / "_layouts/post.html").write_text("{{ content }}", encoding="utf-8")
@@ -46,6 +47,31 @@ class ValidateTests(unittest.TestCase):
 
     def test_valid_site_passes(self):
         self.assertEqual(self.run_validator()[0], 0)
+
+    def write_santo(self, extra=""):
+        (self.root / "_santos").mkdir(exist_ok=True)
+        (self.root / "_santos/san-demo.md").write_text("---\ntitle: Demo\nsanto: San Demo\ndate: 2026-01-01\nyoutube_id: abcdefghijk\ndescription: Demo\n" + extra + "---\nBiografía\n", encoding="utf-8")
+
+    def test_valid_santo_passes(self):
+        self.write_santo()
+        code, output = self.run_validator()
+        self.assertEqual(code, 0)
+        self.assertIn("1 santo(s)", output)
+
+    def test_santo_requires_fields_and_no_todo(self):
+        self.write_santo()
+        (self.root / "_santos/san-demo.md").write_text("---\ntitle: Demo\nyoutube_id: dQw4w9WgXcQ\n---\nTODO\n", encoding="utf-8")
+        code, output = self.run_validator()
+        self.assertEqual(code, 1)
+        self.assertIn("falta cabecera santo", output)
+        self.assertIn("contiene TODO", output)
+        self.assertIn("youtube_id inválido", output)
+
+    def test_home_must_include_santo_hoy(self):
+        (self.root / "_layouts/home.html").write_text("include ultimos-videos.html", encoding="utf-8")
+        code, output = self.run_validator()
+        self.assertEqual(code, 1)
+        self.assertIn("falta include santo-hoy.html", output)
 
     def test_forbidden_embed_and_external_script(self):
         (self.root / "_layouts/post.html").write_text("<iframe>", encoding="utf-8")
