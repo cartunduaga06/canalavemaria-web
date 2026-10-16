@@ -26,7 +26,7 @@ class ValidateTests(unittest.TestCase):
         (self.root / "_layouts/post.html").write_text("{{ content }}", encoding="utf-8")
         (self.root / "_includes/ultimos-videos.html").write_text("", encoding="utf-8")
         (self.root / "_includes/pie.html").write_text("/privacidad/ /terminos/", encoding="utf-8")
-        (self.root / "_config.yml").write_text("exclude:\n  - AGENTS.md\n  - docs\n  - rosario-app\n  - vendor\n", encoding="utf-8")
+        (self.root / "_config.yml").write_text("defaults:\n  - scope:\n      path: \"\"\n      type: santos\n    values:\n      layout: santo\nexclude:\n  - AGENTS.md\n  - docs\n  - rosario-app\n  - vendor\n", encoding="utf-8")
         for page, phrases in validate.LEGAL_PHRASES.items():
             text = "---\nlayout: page\n---\n" + " ".join(phrases)
             (self.root / page).write_text(text, encoding="utf-8")
@@ -66,6 +66,13 @@ class ValidateTests(unittest.TestCase):
         self.assertIn("falta cabecera santo", output)
         self.assertIn("contiene TODO", output)
         self.assertIn("youtube_id inválido", output)
+
+    def test_santos_default_layout_is_required(self):
+        config = self.root / "_config.yml"
+        config.write_text(config.read_text().replace("layout: santo", "layout: otro"), encoding="utf-8")
+        code, output = self.run_validator()
+        self.assertEqual(code, 1)
+        self.assertIn("layout: santo por defecto", output)
 
     def test_home_must_include_santo_hoy(self):
         (self.root / "_layouts/home.html").write_text("include ultimos-videos.html", encoding="utf-8")

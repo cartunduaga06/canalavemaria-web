@@ -6,7 +6,7 @@ layout: default
 <p class="santo__migas"><a href="{{ '/santos/' | relative_url }}">&larr; Todos los santos</a></p>
 <h1>{{ page.santo }}</h1>
 {% if page.description %}<p class="santo__resumen">{{ page.description }}</p>{% endif %}
-<a class="reproductor" href="{{ url_youtube }}" data-embed="https://www.youtube-nocookie.com/embed/{{ page.youtube_id }}?autoplay=1" data-titulo="{{ page.title | escape }}">
+<a class="reproductor" href="{{ url_youtube }}" data-embed="https://www.youtube-nocookie.com/embed/{{ page.youtube_id }}?autoplay=1" data-titulo="{{ page.santo | escape }}">
 <img class="reproductor__imagen" src="https://i.ytimg.com/vi/{{ page.youtube_id }}/hqdefault.jpg" width="480" height="360" decoding="async" alt="Miniatura del vídeo: {{ page.title | escape }}">
 <span class="reproductor__boton"><span class="reproductor__icono" aria-hidden="true"></span><span class="reproductor__texto">Reproducir vídeo</span></span>
 </a>

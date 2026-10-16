@@ -10,6 +10,12 @@ collections:
   santos:
     output: true
     permalink: /santos/:name/
+defaults:
+  - scope:
+      path: ""
+      type: santos
+    values:
+      layout: santo
 plugins:
   - jekyll-feed
   - jekyll-sitemap

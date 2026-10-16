@@ -90,6 +90,8 @@ def main(root=None):
     config = (root / "_config.yml").read_text(encoding="utf-8") if (root / "_config.yml").exists() else ""
     exclude_match = re.search(r"(?ms)^exclude:\s*\n((?:\s+-.*\n?)*)", config)
     excluded = set(re.findall(r"^\s+-\s+([^\s#]+)", exclude_match.group(1), re.M)) if exclude_match else set()
+    if not re.search(r"(?ms)type:\s*santos\s*\n\s*values:\s*\n\s*layout:\s*santo\b", config):
+        errors.append("_config.yml no fija layout: santo por defecto para la colección santos")
     for required_exclude in ("AGENTS.md", "docs", "rosario-app", "vendor"):
         if required_exclude not in excluded: errors.append(f"_config.yml no excluye {required_exclude}")
     for page, phrases in LEGAL_PHRASES.items():
