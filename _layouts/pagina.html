@@ -1,5 +1,9 @@
 ---
 layout: default
 ---
+{% if page.wide %}
+{{ content }}
+{% else %}
 <article class="contenido"><div class="contenedor"><div class="contenido__cuerpo"><h1>{{ page.title }}</h1>{{ content }}</div></div></article>
+{% endif %}
 

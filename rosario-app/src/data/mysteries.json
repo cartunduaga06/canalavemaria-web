@@ -1,0 +1,461 @@
+[
+    {
+        "id": "gozosos",
+        "name": "Misterios Gozosos",
+        "days": [
+            1,
+            6
+        ],
+        "mysteries": [
+            {
+                "title": "La Anunciación del Ángel a María",
+                "meditation": "El ángel anuncia a María el plan de Dios. Ella, con humildad y fe total, responde: “Hágase en mí según tu palabra”.",
+                "meditations": {
+                    "breve_intro": "El ángel anuncia a María el plan de Dios. Ella, con humildad y fe total, responde: “Hágase en mí según tu palabra”. En este misterio aprendemos a confiar en Dios incluso cuando no entendemos todo.",
+                    "por_ave_maria": [
+                        "María escucha la voz de Dios en el silencio de Nazaret.",
+                        "El ángel le anuncia una misión que supera toda lógica humana.",
+                        "María no se cierra al miedo ni a la duda.",
+                        "Pregunta, pero confía en el amor de Dios.",
+                        "El Espíritu Santo la cubre con su sombra.",
+                        "Dios no fuerza, espera su respuesta libre.",
+                        "María entrega su vida entera al plan divino.",
+                        "Su “sí” abre las puertas de la salvación.",
+                        "Jesús comienza a habitar en su seno.",
+                        "Aprendemos a decir “hágase” como María."
+                    ],
+                    "profunda_audio": "Contemplamos a María en Nazaret, una joven sencilla, visitada por Dios en lo cotidiano. El anuncio del ángel no elimina el misterio ni las dificultades, pero revela un amor inmenso que confía en ella. María no entiende todo, pero confía plenamente. Su “hágase” no es resignación, es entrega amorosa. En este misterio aprendemos que Dios también nos habla en la vida diaria, en decisiones pequeñas y grandes. Como María, estamos llamados a escuchar, discernir y responder con fe. Cuando decimos “sí” a Dios, incluso en medio del temor, permitimos que Cristo nazca en nuestra vida. María nos enseña que la verdadera libertad está en confiar en el Señor, sabiendo que su voluntad siempre es camino de vida, esperanza y salvación.",
+                    "juvenil_motivacional": "María era joven como tú, con sueños y planes, y aun así se atrevió a confiar en Dios. No tenía todas las respuestas, pero dijo “sí”. Este misterio te recuerda que Dios no llama a los perfectos, sino a los valientes que confían. Cuando eliges hacer lo correcto, aunque cueste, Cristo nace en tu corazón. No tengas miedo de decirle “sí” a Dios."
+                }
+            },
+            {
+                "title": "La Visitación de María a su prima Isabel",
+                "meditation": "María lleva a Jesús en su seno y corre a servir a Isabel. Donde está Cristo, brotan la alegría, el servicio y la bendición.",
+                "meditations": {
+                    "breve_intro": "María lleva a Jesús en su seno y corre a servir a Isabel. Donde está Cristo, brotan la alegría, el servicio y la bendición.",
+                    "por_ave_maria": [
+                        "María se pone en camino con prontitud.",
+                        "No piensa en sí misma, sino en servir.",
+                        "Lleva a Jesús escondido en su vientre.",
+                        "Su saludo llena de gozo a Isabel.",
+                        "Juan salta de alegría ante la presencia de Cristo.",
+                        "María lleva bendición donde llega.",
+                        "El servicio se vuelve oración viva.",
+                        "La caridad une corazones.",
+                        "Dios se hace presente en el encuentro.",
+                        "Aprendemos a llevar a Jesús a los demás."
+                    ],
+                    "profunda_audio": "María no guarda a Jesús solo para ella. Apenas lo recibe, sale al encuentro del otro. En la Visitación vemos una fe que se hace servicio concreto. María no predica con palabras, predica con su presencia. Allí donde llega, la alegría brota y Dios actúa. Este misterio nos invita a salir de nosotros mismos, a visitar, acompañar y servir. Muchas veces llevamos a Cristo cuando escuchamos, cuando ayudamos, cuando estamos presentes. María nos enseña que la verdadera espiritualidad no se encierra, sino que se comparte. Quien vive unido a Cristo se convierte en portador de esperanza para los demás.",
+                    "juvenil_motivacional": "María no se quedó quieta con su fe. Se levantó y fue a ayudar. Este misterio te invita a vivir una fe activa, que se mueve y sirve. Cuando ayudas, acompañas o escuchas, estás llevando a Jesús contigo. No hace falta ser perfecto: basta tener un corazón disponible para amar."
+                }
+            },
+            {
+                "title": "El Nacimiento de Jesús en Belén",
+                "meditation": "Jesús nace pobre y humilde en Belén. Dios se hace cercano, pequeño y accesible para todos.",
+                "meditations": {
+                    "breve_intro": "Jesús nace pobre y humilde en Belén. Dios se hace cercano, pequeño y accesible para todos.",
+                    "por_ave_maria": [
+                        "María y José llegan a Belén cansados.",
+                        "No encuentran lugar en la posada.",
+                        "Jesús nace en la sencillez de un pesebre.",
+                        "El Hijo de Dios se hace pequeño.",
+                        "María lo contempla con amor.",
+                        "José cuida en silencio.",
+                        "El cielo se alegra por su nacimiento.",
+                        "Los pastores acuden con fe sencilla.",
+                        "Dios se acerca a los humildes.",
+                        "Jesús nace también en nuestro corazón."
+                    ],
+                    "profunda_audio": "En Belén contemplamos el misterio de un Dios que elige la pobreza y la humildad. Jesús no nace en un palacio, sino en un pesebre, mostrándonos que el amor verdadero no necesita grandezas. María y José acogen esta realidad con fe y confianza. Este misterio nos invita a abrir espacio a Dios en nuestra vida, incluso cuando no todo es perfecto. Jesús nace donde hay sencillez, donde hay un corazón dispuesto. Belén nos recuerda que Dios se hace cercano, camina con nosotros y transforma lo pequeño en lugar de salvación.",
+                    "juvenil_motivacional": "Jesús no nació rodeado de lujos, sino en lo simple. Este misterio te enseña que no necesitas tenerlo todo para que Dios actúe en tu vida. Cuando eres humilde y auténtico, Cristo puede nacer en tu corazón. Dios ama empezar grandes cosas en lo pequeño."
+                }
+            },
+            {
+                "title": "La Presentación de Jesús en el Templo",
+                "meditation": "María y José presentan a Jesús al Padre. Ofrecen lo más valioso, confiando plenamente en Dios.",
+                "meditations": {
+                    "breve_intro": "María y José presentan a Jesús al Padre. Ofrecen lo más valioso, confiando plenamente en Dios.",
+                    "por_ave_maria": [
+                        "María y José obedecen la Ley del Señor.",
+                        "Presentan a Jesús en el Templo.",
+                        "Reconocen que Él pertenece a Dios.",
+                        "Simeón proclama la luz para las naciones.",
+                        "María guarda estas palabras en su corazón.",
+                        "La profecía anuncia alegría y dolor.",
+                        "La fe se fortalece en la obediencia.",
+                        "Dios cumple sus promesas.",
+                        "Ofrecer a Dios transforma la vida.",
+                        "Aprendemos a confiar incluso en el dolor."
+                    ],
+                    "profunda_audio": "En la Presentación vemos a una familia que vive su fe con sencillez y obediencia. María y José reconocen que Jesús es don de Dios y lo ofrecen al Padre. Simeón anuncia que Jesús será luz, pero también signo de contradicción. Este misterio nos enseña que seguir a Dios implica entrega, confianza y, a veces, dolor. María acepta todo con fe, sabiendo que Dios es fiel. Presentar nuestra vida al Señor es permitirle guiar nuestro camino, aun cuando no comprendemos todo.",
+                    "juvenil_motivacional": "María y José ofrecen a Dios lo que más aman. Este misterio te invita a confiarle a Dios tu vida, tus sueños y tus luchas. Aunque el camino no siempre sea fácil, Dios nunca abandona. Cuando entregas todo al Señor, Él te da una esperanza más grande."
+                }
+            },
+            {
+                "title": "El Niño Jesús perdido y hallado en el Templo",
+                "meditation": "María y José buscan a Jesús con angustia y lo encuentran en el Templo.",
+                "meditations": {
+                    "breve_intro": "María y José buscan a Jesús con angustia y lo encuentran en el Templo. Este misterio nos recuerda la importancia de buscar siempre a Dios.",
+                    "por_ave_maria": [
+                        "Jesús se queda en el Templo.",
+                        "María y José lo buscan con dolor.",
+                        "La ausencia despierta el amor.",
+                        "Tres días de búsqueda intensa.",
+                        "Jesús es hallado entre los doctores.",
+                        "Habla de las cosas del Padre.",
+                        "María no entiende todo, pero confía.",
+                        "Jesús vuelve obediente a Nazaret.",
+                        "La familia crece en sabiduría.",
+                        "Aprendemos a no alejarnos de Dios."
+                    ],
+                    "profunda_audio": "Este misterio nos muestra que incluso quienes aman a Dios pueden experimentar momentos de pérdida y confusión. María y José buscan a Jesús con angustia, pero no se rinden. Finalmente lo encuentran en la casa del Padre. En nuestra vida también hay momentos en que parece que Dios está lejos. Este misterio nos enseña a buscar con perseverancia, a no rendirnos en la oración. Jesús siempre se deja encontrar por quien lo busca con un corazón sincero. María nos acompaña en esta búsqueda confiada.",
+                    "juvenil_motivacional": "A veces podemos alejarnos de Dios sin darnos cuenta. Este misterio te recuerda que siempre vale la pena volver a buscarlo. Aunque te sientas perdido, Jesús está esperándote. No te rindas: buscar a Dios con sinceridad siempre lleva al encuentro."
+                }
+            }
+        ]
+    },
+    {
+        "id": "dolorosos",
+        "name": "Misterios Dolorosos",
+        "days": [
+            2,
+            5
+        ],
+        "mysteries": [
+            {
+                "title": "La Oración de Jesús en el Huerto",
+                "meditation": "Jesús ora en Getsemaní y entrega su voluntad al Padre en medio de la angustia. Nos enseña a confiar en Dios incluso cuando el sufrimiento pesa.",
+                "meditations": {
+                    "breve_intro": "Jesús ora en Getsemaní y entrega su voluntad al Padre en medio de la angustia. Nos enseña a confiar en Dios incluso cuando el sufrimiento pesa.",
+                    "por_ave_maria": [
+                        "Jesús entra al huerto con el corazón oprimido.",
+                        "Siente miedo y profunda tristeza.",
+                        "Ora al Padre con confianza filial.",
+                        "Acepta la voluntad de Dios.",
+                        "Suda sangre por amor a la humanidad.",
+                        "Sus amigos duermen mientras Él vela.",
+                        "Jesús permanece fiel en la soledad.",
+                        "Un ángel lo fortalece.",
+                        "El amor vence al miedo.",
+                        "Aprendemos a orar en la prueba."
+                    ],
+                    "profunda_audio": "En el Huerto de los Olivos contemplamos a Jesús verdadero Dios y verdadero hombre, experimentando angustia y temor. Él no huye del sufrimiento, sino que lo presenta al Padre en oración confiada. Jesús nos enseña que la oración no elimina siempre el dolor, pero nos da fuerza para afrontarlo. En Getsemaní aprendemos a decir: “Padre, que se haga tu voluntad”. María nos acompaña en nuestras noches oscuras y nos enseña a confiar cuando todo parece incierto. Este misterio nos invita a permanecer fieles en la oración, incluso cuando nos sentimos solos o incomprendidos.",
+                    "juvenil_motivacional": "Jesús también sintió miedo y tristeza. Este misterio te recuerda que no estás solo cuando sufres. Orar no es huir, es encontrar fuerza. Cuando entregas tus luchas a Dios, Él te sostiene y te da paz para seguir adelante."
+                }
+            },
+            {
+                "title": "La Flagelación de Jesús atado a la columna",
+                "meditation": "Jesús es azotado injustamente. Acepta el dolor por amor y nos enseña a unir nuestro sufrimiento al suyo.",
+                "meditations": {
+                    "breve_intro": "Jesús es azotado injustamente. Acepta el dolor por amor y nos enseña a unir nuestro sufrimiento al suyo.",
+                    "por_ave_maria": [
+                        "Jesús es atado a la columna.",
+                        "Los golpes caen sin compasión.",
+                        "Su cuerpo sufre en silencio.",
+                        "Acepta el dolor por amor.",
+                        "Cada herida es un acto de entrega.",
+                        "Jesús no responde con odio.",
+                        "Su paciencia es redentora.",
+                        "El sufrimiento se transforma en salvación.",
+                        "María acompaña en silencio.",
+                        "Aprendemos a ofrecer nuestras cruces."
+                    ],
+                    "profunda_audio": "La flagelación nos muestra el amor de Jesús que acepta el sufrimiento sin responder con violencia. Cada golpe revela un amor que sana y redime. Este misterio nos invita a reflexionar sobre nuestras propias heridas y dolores. Unidos a Cristo, nuestros sufrimientos pueden transformarse en fuente de gracia. María, Madre dolorosa, nos acompaña cuando la vida golpea fuerte. Ella nos enseña a no perder la esperanza, sabiendo que Dios puede sacar vida incluso del dolor más grande.",
+                    "juvenil_motivacional": "Jesús soportó golpes y humillaciones por amor. Este misterio te anima a no rendirte cuando la vida duele. Dios ve tu esfuerzo y tu lucha. Unidos a Cristo, incluso el sufrimiento puede transformarse en fuerza y esperanza."
+                }
+            },
+            {
+                "title": "La Coronación de espinas",
+                "meditation": "Jesús es humillado y coronado de espinas. Acepta el desprecio para enseñarnos el camino de la humildad.",
+                "meditations": {
+                    "breve_intro": "Jesús es humillado y coronado de espinas. Acepta el desprecio para enseñarnos el camino de la humildad.",
+                    "por_ave_maria": [
+                        "Jesús es burlado como rey.",
+                        "Una corona de espinas hiere su frente.",
+                        "El dolor se une a la humillación.",
+                        "Jesús guarda silencio.",
+                        "Acepta el desprecio con amor.",
+                        "No responde al odio con violencia.",
+                        "Reina desde la humildad.",
+                        "Su reino no es de este mundo.",
+                        "María sufre en silencio.",
+                        "Aprendemos la fuerza de la humildad."
+                    ],
+                    "profunda_audio": "La coronación de espinas revela a un Rey distinto, que reina desde la humildad y el amor. Jesús acepta la burla y el rechazo para mostrarnos que la verdadera grandeza no está en el poder, sino en el servicio. Este misterio nos invita a examinar nuestro corazón: ¿buscamos reconocimiento o fidelidad a Dios? María nos acompaña cuando somos incomprendidos o rechazados. Ella nos enseña a confiar en que Dios ve lo que el mundo desprecia.",
+                    "juvenil_motivacional": "Jesús fue ridiculizado y humillado, pero no perdió su identidad. Este misterio te recuerda que tu valor no depende de la opinión de los demás. Dios te ama tal como eres y te llama a vivir con humildad y valentía."
+                }
+            },
+            {
+                "title": "Jesús con la Cruz a cuestas camino al Calvario",
+                "meditation": "Jesús carga la cruz y avanza con amor. Nos enseña a caminar con fe en medio de las dificultades.",
+                "meditations": {
+                    "breve_intro": "Jesús carga la cruz y avanza con amor. Nos enseña a caminar con fe en medio de las dificultades.",
+                    "por_ave_maria": [
+                        "Jesús toma la cruz sobre sus hombros.",
+                        "Cada paso es un acto de amor.",
+                        "El peso parece insoportable.",
+                        "Cae y vuelve a levantarse.",
+                        "María lo acompaña con su mirada.",
+                        "Simón ayuda a cargar la cruz.",
+                        "El camino es de entrega total.",
+                        "Jesús no abandona.",
+                        "El amor lo sostiene.",
+                        "Aprendemos a perseverar."
+                    ],
+                    "profunda_audio": "Camino al Calvario, Jesús nos muestra que el amor verdadero persevera incluso en el cansancio. La cruz pesa, pero Él sigue adelante por nuestra salvación. Este misterio nos invita a reflexionar sobre nuestras propias cruces diarias. María camina junto a su Hijo, enseñándonos a acompañar y a sostener. No estamos solos en el camino del sufrimiento. Con Cristo, cada paso puede convertirse en camino de redención y esperanza.",
+                    "juvenil_motivacional": "Todos cargamos cruces en la vida. Este misterio te recuerda que no estás solo. Jesús camina contigo y te da fuerza para seguir adelante, incluso cuando parece imposible. Cada esfuerzo vale la pena cuando se hace con amor."
+                }
+            },
+            {
+                "title": "La Crucifixión y muerte de Jesús",
+                "meditation": "Jesús entrega su vida en la cruz por amor. En su sacrificio encontramos perdón, esperanza y vida nueva.",
+                "meditations": {
+                    "breve_intro": "Jesús entrega su vida en la cruz por amor. En su sacrificio encontramos perdón, esperanza y vida nueva.",
+                    "por_ave_maria": [
+                        "Jesús es clavado en la cruz.",
+                        "El dolor alcanza su máxima expresión.",
+                        "Perdona a quienes lo crucifican.",
+                        "María permanece fiel al pie de la cruz.",
+                        "Jesús entrega su espíritu al Padre.",
+                        "El amor vence al pecado.",
+                        "La cruz se convierte en salvación.",
+                        "El cielo y la tierra se estremecen.",
+                        "Nace la esperanza para el mundo.",
+                        "Aprendemos a amar hasta el final."
+                    ],
+                    "profunda_audio": "En la cruz contemplamos el amor más grande. Jesús entrega su vida libremente, perdonando incluso en medio del sufrimiento. María permanece firme, compartiendo el dolor y la esperanza. Este misterio nos invita a confiar en que el amor de Dios es más fuerte que el pecado y la muerte. La cruz no es el final, sino el camino hacia la vida nueva. Unidos a Cristo crucificado, encontramos sentido incluso en el sufrimiento.",
+                    "juvenil_motivacional": "Jesús dio su vida por amor a ti. Este misterio te recuerda cuánto vales para Dios. Aunque enfrentes momentos difíciles, la cruz es señal de esperanza. El amor de Cristo siempre tiene la última palabra."
+                }
+            }
+        ]
+    },
+    {
+        "id": "gloriosos",
+        "name": "Misterios Gloriosos",
+        "days": [
+            0,
+            3
+        ],
+        "mysteries": [
+            {
+                "title": "La Resurrección de Jesús",
+                "meditation": "Jesús vence la muerte y resucita glorioso. La esperanza renace y la vida triunfa para siempre en Él.",
+                "meditations": {
+                    "breve_intro": "Jesús vence la muerte y resucita glorioso. La esperanza renace y la vida triunfa para siempre en Él.",
+                    "por_ave_maria": [
+                        "El sepulcro aparece vacío al amanecer.",
+                        "La piedra ha sido removida.",
+                        "La muerte no tiene la última palabra.",
+                        "Jesús vive y resucita glorioso.",
+                        "El miedo se transforma en alegría.",
+                        "Las mujeres anuncian la Buena Noticia.",
+                        "La fe vence a la tristeza.",
+                        "Cristo camina con los suyos.",
+                        "La vida nueva comienza.",
+                        "Resucitamos con Cristo en esperanza."
+                    ],
+                    "profunda_audio": "La Resurrección es el corazón de nuestra fe. Jesús vence definitivamente al pecado y a la muerte, inaugurando una vida nueva para toda la humanidad. El sepulcro vacío nos anuncia que el amor es más fuerte que cualquier oscuridad. Este misterio nos invita a renovar la esperanza, incluso cuando todo parece perdido. María, que creyó aun en la noche del dolor, ahora se llena de gozo. En cada resurrección interior, Cristo nos levanta y nos da fuerza para comenzar de nuevo.",
+                    "juvenil_motivacional": "Jesús vive y camina contigo. Este misterio te recuerda que ninguna caída es definitiva. Siempre hay una nueva oportunidad cuando confías en Cristo. La Resurrección es la prueba de que la esperanza nunca muere."
+                }
+            },
+            {
+                "title": "La Ascensión de Jesús al Cielo",
+                "meditation": "Jesús asciende al cielo y nos abre el camino hacia el Padre. Nuestra mirada se eleva hacia la esperanza eterna.",
+                "meditations": {
+                    "breve_intro": "Jesús asciende al cielo y nos abre el camino hacia el Padre. Nuestra mirada se eleva hacia la esperanza eterna.",
+                    "por_ave_maria": [
+                        "Jesús se despide de sus discípulos.",
+                        "Les promete su presencia constante.",
+                        "Asciende glorioso al cielo.",
+                        "No abandona, permanece con nosotros.",
+                        "Nuestra esperanza se eleva.",
+                        "Cristo intercede por nosotros.",
+                        "El cielo se abre a la humanidad.",
+                        "La fe mira más allá de lo visible.",
+                        "La misión continúa en la tierra.",
+                        "Caminamos hacia la vida eterna."
+                    ],
+                    "profunda_audio": "En la Ascensión contemplamos a Jesús que vuelve al Padre, llevando consigo nuestra humanidad. No se trata de una despedida, sino de una nueva forma de presencia. Cristo nos abre el camino al cielo y nos recuerda que nuestra meta es la vida eterna. María acompaña a la Iglesia en la espera confiada. Este misterio nos invita a vivir con los pies en la tierra y el corazón en el cielo, trabajando con esperanza mientras caminamos hacia Dios.",
+                    "juvenil_motivacional": "Jesús asciende, pero no se va de tu vida. Este misterio te recuerda que tu vida tiene un destino grande. Vive con esperanza y no te conformes con lo pasajero. Dios te llama a algo más alto."
+                }
+            },
+            {
+                "title": "La Venida del Espíritu Santo en Pentecostés",
+                "meditation": "El Espíritu Santo desciende sobre los apóstoles. La Iglesia nace con fuerza y valentía.",
+                "meditations": {
+                    "breve_intro": "El Espíritu Santo desciende sobre los apóstoles. La Iglesia nace con fuerza y valentía.",
+                    "por_ave_maria": [
+                        "Los discípulos oran unidos.",
+                        "María está en medio de ellos.",
+                        "El Espíritu Santo desciende con poder.",
+                        "El miedo se transforma en valentía.",
+                        "Los corazones se llenan de fuego.",
+                        "Nace la Iglesia misionera.",
+                        "La fe se anuncia sin temor.",
+                        "Dios renueva a su pueblo.",
+                        "El amor impulsa la misión.",
+                        "Vivimos guiados por el Espíritu."
+                    ],
+                    "profunda_audio": "En Pentecostés contemplamos la acción poderosa del Espíritu Santo que transforma corazones. Los apóstoles, antes temerosos, se convierten en testigos valientes. María acompaña este nacimiento de la Iglesia con su oración maternal. Este misterio nos invita a abrirnos al Espíritu Santo, que renueva, guía y fortalece. Él actúa también hoy, impulsándonos a vivir la fe con alegría y compromiso. Donde está el Espíritu, hay vida, esperanza y misión.",
+                    "juvenil_motivacional": "El Espíritu Santo también quiere encender tu corazón. Este misterio te recuerda que no estás solo para vivir tu fe. Dios te da su fuerza para amar, decidir bien y ser valiente en medio del mundo."
+                }
+            },
+            {
+                "title": "La Asunción de María al Cielo",
+                "meditation": "María es llevada al cielo en cuerpo y alma. Dios glorifica a quien confió plenamente en Él.",
+                "meditations": {
+                    "breve_intro": "María es llevada al cielo en cuerpo y alma. Dios glorifica a quien confió plenamente en Él.",
+                    "por_ave_maria": [
+                        "María culmina su camino terreno.",
+                        "Dios la eleva a la gloria.",
+                        "Su cuerpo no conoce la corrupción.",
+                        "La fidelidad es recompensada.",
+                        "María vive junto a su Hijo.",
+                        "El cielo acoge a la Madre.",
+                        "La esperanza se hace promesa.",
+                        "Dios cumple sus maravillas.",
+                        "María intercede por nosotros.",
+                        "Aspiramos a la vida eterna."
+                    ],
+                    "profunda_audio": "La Asunción nos muestra el destino que Dios prepara para quienes confían en Él. María, humilde servidora, es elevada a la gloria del cielo. En ella contemplamos la promesa de la resurrección futura. Este misterio nos llena de esperanza y nos recuerda que nuestra vida no termina aquí. María, ya glorificada, sigue acompañando a sus hijos con amor maternal. Ella nos anima a caminar fielmente hacia la vida eterna.",
+                    "juvenil_motivacional": "María llegó a la meta porque confió en Dios. Este misterio te recuerda que tu vida tiene un sentido eterno. Vive con esperanza y fidelidad, sabiendo que Dios prepara algo grande para quienes lo aman."
+                }
+            },
+            {
+                "title": "La Coronación de María como Reina del Cielo y de la Tierra",
+                "meditation": "María es coronada Reina del cielo y de la tierra. Su realeza nace del amor y del servicio.",
+                "meditations": {
+                    "breve_intro": "María es coronada Reina del cielo y de la tierra. Su realeza nace del amor y del servicio.",
+                    "por_ave_maria": [
+                        "María es coronada por Dios.",
+                        "Su realeza es de amor.",
+                        "Reina porque sirvió con humildad.",
+                        "Intercede por todos sus hijos.",
+                        "Su corona es la fidelidad.",
+                        "María reina junto a Cristo.",
+                        "El cielo se llena de alegría.",
+                        "La Madre cuida a la Iglesia.",
+                        "Conduce siempre hacia Jesús.",
+                        "Confiamos en su protección."
+                    ],
+                    "profunda_audio": "La Coronación de María nos muestra el fruto de una vida entregada totalmente a Dios. Su realeza no es de poder, sino de amor y servicio. Como Madre y Reina, intercede por nosotros y nos conduce siempre hacia su Hijo. Este misterio nos invita a confiar en su cuidado maternal y a imitar su humildad. En María contemplamos la victoria del amor fiel y obediente.",
+                    "juvenil_motivacional": "María reina porque supo amar y servir. Este misterio te recuerda que la verdadera grandeza está en el amor sincero. Confía en María, que te guía siempre hacia Jesús y te acompaña en tu camino."
+                }
+            }
+        ]
+    },
+    {
+        "id": "luminosos",
+        "name": "Misterios Luminosos",
+        "days": [
+            4
+        ],
+        "mysteries": [
+            {
+                "title": "El Bautismo de Jesús en el Jordán",
+                "meditation": "Jesús se bautiza en el Jordán y el Padre lo revela como su Hijo amado. Comienza públicamente su misión de salvación.",
+                "meditations": {
+                    "breve_intro": "Jesús se bautiza en el Jordán y el Padre lo revela como su Hijo amado. Comienza públicamente su misión de salvación.",
+                    "por_ave_maria": [
+                        "Jesús entra humildemente en las aguas del Jordán.",
+                        "Se pone en la fila con los pecadores.",
+                        "Juan lo reconoce como el Enviado.",
+                        "El cielo se abre sobre Jesús.",
+                        "El Espíritu Santo desciende como paloma.",
+                        "El Padre proclama su amor.",
+                        "Jesús es revelado como Hijo amado.",
+                        "Comienza su misión pública.",
+                        "La Trinidad se manifiesta.",
+                        "Renovamos nuestra identidad bautismal."
+                    ],
+                    "profunda_audio": "En el Bautismo de Jesús contemplamos el inicio de su vida pública. Aunque no tenía pecado, se sumerge en las aguas para cargar con nuestras debilidades. El Padre lo presenta como su Hijo amado y el Espíritu Santo desciende sobre Él. Este misterio nos recuerda nuestro propio bautismo, donde fuimos llamados hijos de Dios. María nos acompaña para vivir con fidelidad esta identidad, renovando cada día nuestro compromiso cristiano en medio del mundo.",
+                    "juvenil_motivacional": "Jesús no se avergüenza de caminar con los pecadores. Este misterio te recuerda que Dios te llama su hijo amado. Vive con dignidad, recuerda quién eres y no tengas miedo de comenzar de nuevo con Cristo."
+                }
+            },
+            {
+                "title": "Las Bodas de Caná",
+                "meditation": "En Caná, Jesús realiza su primer signo por intercesión de María. Donde está Jesús, la alegría se renueva.",
+                "meditations": {
+                    "breve_intro": "En Caná, Jesús realiza su primer signo por intercesión de María. Donde está Jesús, la alegría se renueva.",
+                    "por_ave_maria": [
+                        "Jesús participa en la alegría humana.",
+                        "La falta de vino amenaza la fiesta.",
+                        "María se da cuenta de la necesidad.",
+                        "Presenta la dificultad a Jesús.",
+                        "Confía plenamente en su Hijo.",
+                        "Jesús transforma el agua en vino.",
+                        "La alegría es restaurada.",
+                        "Los sirvientes obedecen con fe.",
+                        "El signo revela su gloria.",
+                        "María nos dice: “Hagan lo que Él les diga”."
+                    ],
+                    "profunda_audio": "En Caná contemplamos la delicadeza del amor de Dios. María intercede ante su Hijo y Jesús transforma el agua en vino, renovando la alegría. Este misterio nos enseña a confiar en la intercesión maternal de María y a obedecer la palabra de Jesús. En nuestras carencias y dificultades, Él puede obrar maravillas. María nos guía siempre hacia Cristo, fuente de la verdadera alegría.",
+                    "juvenil_motivacional": "María se dio cuenta de una necesidad y la presentó a Jesús. Este misterio te recuerda que puedes confiarle tus problemas a Dios. Jesús puede transformar lo ordinario en algo nuevo y mejor. Confía y sigue su palabra."
+                }
+            },
+            {
+                "title": "El Anuncio del Reino de Dios e invitación a la conversión",
+                "meditation": "Jesús anuncia el Reino de Dios y llama a la conversión. Su palabra invita a un cambio de vida.",
+                "meditations": {
+                    "breve_intro": "Jesús anuncia el Reino de Dios y llama a la conversión. Su palabra invita a un cambio de vida.",
+                    "por_ave_maria": [
+                        "Jesús anuncia la cercanía del Reino.",
+                        "Llama a la conversión del corazón.",
+                        "Invita a creer en el Evangelio.",
+                        "Su palabra sana y libera.",
+                        "Perdona a los pecadores.",
+                        "Se acerca a los excluidos.",
+                        "El amor transforma la vida.",
+                        "La fe exige decisión.",
+                        "María acompaña el camino.",
+                        "Respondemos con conversión sincera."
+                    ],
+                    "profunda_audio": "Jesús recorre pueblos y ciudades anunciando el Reino de Dios. Su mensaje es claro: conviértanse y crean en el Evangelio. Este misterio nos invita a revisar nuestra vida y a abrir el corazón a la misericordia divina. María nos acompaña en este proceso de conversión, enseñándonos a escuchar la palabra y a ponerla en práctica. El Reino comienza en el corazón que se deja transformar por Dios.",
+                    "juvenil_motivacional": "Jesús te invita a cambiar y a empezar de nuevo. Este misterio te recuerda que siempre hay oportunidad de mejorar. No tengas miedo de dejar lo que te aleja de Dios. La conversión es un camino de libertad y alegría."
+                }
+            },
+            {
+                "title": "La Transfiguración del Señor",
+                "meditation": "Jesús se transfigura y revela su gloria. Nos muestra la luz que vence toda oscuridad.",
+                "meditations": {
+                    "breve_intro": "Jesús se transfigura y revela su gloria. Nos muestra la luz que vence toda oscuridad.",
+                    "por_ave_maria": [
+                        "Jesús sube al monte a orar.",
+                        "Su rostro se llena de luz.",
+                        "Sus vestiduras resplandecen.",
+                        "Moisés y Elías lo acompañan.",
+                        "El Padre confirma su identidad.",
+                        "Los discípulos quedan asombrados.",
+                        "La gloria fortalece la fe.",
+                        "La cruz se comprende a la luz de la gloria.",
+                        "Jesús invita a escucharle.",
+                        "Confiamos en la luz de Cristo."
+                    ],
+                    "profunda_audio": "En la Transfiguración, Jesús permite a sus discípulos contemplar su gloria antes de la pasión. Este misterio nos recuerda que la cruz conduce a la resurrección. María nos enseña a confiar incluso cuando no entendemos todo. La luz de Cristo nos fortalece en los momentos de oscuridad y nos anima a perseverar en la fe, sabiendo que la gloria nos espera.",
+                    "juvenil_motivational": "Cuando todo parece oscuro, Jesús te muestra su luz. Este misterio te recuerda que las dificultades no son el final. Confía en Dios y sigue adelante, porque la luz de Cristo siempre vence."
+                }
+            },
+            {
+                "title": "La Institución de la Eucaristía",
+                "meditation": "Jesús se queda con nosotros en la Eucaristía. Nos entrega su Cuerpo y Sangre como alimento de vida eterna.",
+                "meditations": {
+                    "breve_intro": "Jesús se queda con nosotros en la Eucaristía. Nos entrega su Cuerpo y Sangre como alimento de vida eterna.",
+                    "por_ave_maria": [
+                        "Jesús celebra la Pascua con sus discípulos.",
+                        "Toma el pan y da gracias.",
+                        "Lo parte y lo entrega.",
+                        "Se ofrece como alimento.",
+                        "Toma el cáliz de vino.",
+                        "Entrega su Sangre por amor.",
+                        "Instituye la Eucaristía.",
+                        "Permanece con nosotros.",
+                        "María nos conduce a Jesús Eucaristía.",
+                        "Vivimos de este Pan de vida."
+                    ],
+                    "profunda_audio": "En la Eucaristía, Jesús se queda para siempre con nosotros. Se entrega como alimento para fortalecer nuestra fe y nuestro amor. Este misterio nos invita a valorar la presencia real de Cristo y a acercarnos con devoción al altar. María nos conduce siempre a la Eucaristía, donde su Hijo nos espera. En cada comunión, Cristo renueva su entrega y nos da vida eterna.",
+                    "juvenil_motivacional": "Jesús quiso quedarse contigo en la Eucaristía. Este misterio te recuerda que nunca estás solo. En la misa encuentras fuerza, paz y sentido. Acércate a Jesús y deja que transforme tu vida."
+                }
+            }
+        ]
+    }
+]

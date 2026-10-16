@@ -1,0 +1,8 @@
+rosario-app/node_modules/
+rosario-app/dist/
+.env
+.env.*
+!.env.example
+_site/
+.jekyll-cache/
+__pycache__/

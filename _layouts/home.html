@@ -1,7 +1,40 @@
 ---
 layout: default
 ---
-<section class="hero"><div class="contenedor"><h1>Una comunidad unida en <span>fe</span></h1><p>Ave María TV, tu hogar espiritual donde encontrarás oraciones, reflexiones y la compañía de los santos.</p><a class="boton boton--dorado" href="{{ '/videos/' | relative_url }}">Ver vídeos católicos</a></div></section>
-<section class="seccion seccion--azul"><div class="contenedor"><div class="encabezado-seccion"><h2>Fortalece tu fe cada día</h2><p>Contenido para acompañarte en tu camino espiritual.</p></div><div class="tarjetas"><article class="tarjeta"><h3>Oración diaria</h3><p>Encuentra un momento de paz y conexión con Dios.</p></article><article class="tarjeta"><h3>Palabra y reflexión</h3><p>Mensajes para vivir el Evangelio en la vida cotidiana.</p></article><article class="tarjeta"><h3>Comunidad de fe</h3><p>Crece acompañado por Ave María TV.</p></article></div></div></section>
-<section class="seccion"><div class="contenedor"><div class="encabezado-seccion"><h2>Vídeos recientes</h2><p>Shorts y vídeos católicos para tu día.</p></div><div class="video-grid">{% assign recientes = site.posts | limit: 12 %}{% for post in recientes %}<article class="video-card"><a href="{{ post.url | relative_url }}"><div class="video-card__thumb" aria-hidden="true">▶</div><div class="video-card__body"><h3>{{ post.title }}</h3><p>{{ post.description }}</p></div></a></article>{% endfor %}</div></div></section>
+<div class="portada">
+  <section class="hero hero--tarjeta" aria-labelledby="titulo-portada">
+    <div class="contenedor">
+      <div class="hero__tarjeta">
+        <img class="hero__imagen" src="https://images.unsplash.com/photo-1590656429609-dcf934861bae" alt="Imagen mariana con luz dorada">
+        <h1 id="titulo-portada">Bajo el manto de María,<br><span>una comunidad unida en fe</span></h1>
+        <p>Bienvenido a Ave María TV, tu hogar espiritual donde encontrarás oraciones, reflexiones y la compañía de los santos para fortalecer tu camino de fe.</p>
+        <div class="hero__acciones">
+          <a class="boton boton--azul" href="{{ '/rosario/' | relative_url }}">✧ Únete al Rosario Diario</a>
+          <a class="boton boton--borde" href="{{ '/videos/' | relative_url }}">▣ Ver Shorts de Santos</a>
+        </div>
+      </div>
+    </div>
+  </section>
 
+  {% include ultimos-videos.html %}
+  <section class="seccion seccion--mensajes" aria-labelledby="mensajes-titulo">
+    <div class="contenedor">
+      <div class="encabezado-seccion">
+        <h2 id="mensajes-titulo">Mensajes Recientes</h2>
+        <p>Reflexiones y enseñanzas para nutrir tu vida espiritual</p>
+      </div>
+      <div class="tarjetas tarjetas--mensajes">
+        <article class="tarjeta mensaje"><time datetime="2025-11-15">15 Nov 2025</time><h3>La importancia del Rosario diario</h3><p>Descubre cómo esta poderosa oración puede transformar tu vida espiritual.</p></article>
+        <article class="tarjeta mensaje"><time datetime="2025-11-12">12 Nov 2025</time><h3>María, Madre de Misericordia</h3><p>Reflexión sobre el amor maternal de la Virgen María hacia todos sus hijos.</p></article>
+        <article class="tarjeta mensaje"><time datetime="2025-11-10">10 Nov 2025</time><h3>Combate espiritual en tiempos modernos</h3><p>Herramientas de fe para enfrentar los desafíos del mundo actual.</p></article>
+      </div>
+    </div>
+  </section>
+
+  <section class="seccion seccion--santos" aria-labelledby="santos-titulo">
+    <div class="contenedor">
+      <div class="encabezado-seccion"><h2 id="santos-titulo">Santos de Hoy</h2><p>Conoce a los santos que interceden por nosotros</p></div>
+      <div class="tarjetas"><article class="tarjeta"><h3>San Benito</h3><p>Padre del monacato occidental y patrón de Europa.</p></article><article class="tarjeta"><h3>San Miguel Arcángel</h3><p>Príncipe de los ángeles y protector contra el mal.</p></article><article class="tarjeta"><h3>Santa Rita de Casia</h3><p>Abogada de los imposibles y patrona de las causas difíciles.</p></article></div>
+    </div>
+  </section>
+</div>

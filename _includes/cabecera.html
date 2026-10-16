@@ -1,12 +1,22 @@
 <header class="cabecera">
   <div class="contenedor cabecera__interior">
-    <a class="marca" href="{{ '/' | relative_url }}" aria-label="Ave María TV, inicio"><span class="marca__icono" aria-hidden="true">✦</span><span>Ave María TV</span></a>
+    <a class="marca" href="{{ '/' | relative_url }}" aria-label="Ave María TV, inicio">
+      <span class="marca__icono" aria-hidden="true">AM</span>
+      <span class="marca__texto"><strong>Ave María TV</strong><small>Comunidad de Fe</small></span>
+    </a>
     <nav class="nav" aria-label="Navegación principal">
-      <a href="{{ '/' | relative_url }}">Inicio</a>
-      <a href="{{ '/videos/' | relative_url }}">Vídeos</a>
-      <a href="{{ '/oraciones/' | relative_url }}">Oraciones</a>
-      <a href="{{ '/contacto/' | relative_url }}">Contacto</a>
+      <a{% if page.url == '/' %} class="nav__activo" aria-current="page"{% endif %} href="{{ '/' | relative_url }}">Inicio</a>
+      <a{% if page.url == '/santos/' %} class="nav__activo" aria-current="page"{% endif %} href="{{ '/santos/' | relative_url }}">Santos</a>
+      <a{% if page.url == '/oraciones/' %} class="nav__activo" aria-current="page"{% endif %} href="{{ '/oraciones/' | relative_url }}">Oraciones</a>
+      <a{% if page.url == '/videos/' %} class="nav__activo" aria-current="page"{% endif %} href="{{ '/videos/' | relative_url }}">Vídeos</a>
+      <a{% if page.url == '/blog/' %} class="nav__activo" aria-current="page"{% endif %} href="{{ '/blog/' | relative_url }}">Blog</a>
+      <a{% if page.url == '/productos/' %} class="nav__activo" aria-current="page"{% endif %} href="{{ '/productos/' | relative_url }}">Recursos</a>
+      <a{% if page.url == '/contacto/' %} class="nav__activo" aria-current="page"{% endif %} href="{{ '/contacto/' | relative_url }}">Contacto</a>
     </nav>
+    <div class="social" aria-label="Redes sociales">
+      <a href="https://www.youtube.com/@CanalAveMariaOficial" aria-label="YouTube">▶</a>
+      <a href="https://www.instagram.com/" aria-label="Instagram">◎</a>
+    </div>
   </div>
 </header>
 
