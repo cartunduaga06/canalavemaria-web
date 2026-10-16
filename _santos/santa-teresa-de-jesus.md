@@ -1,4 +1,5 @@
 ---
+layout: santo
 title: "Vida de Santa Teresa de Jesús"
 santo: "Santa Teresa de Jesús"
 date: 2026-10-15 18:50:15 +0000
