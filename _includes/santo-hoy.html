@@ -1,0 +1,19 @@
+{%- assign santos_recientes = site.santos | sort: 'date' | reverse -%}
+{% if santos_recientes.size > 0 %}
+{%- assign santo = santos_recientes.first -%}
+<section class="seccion seccion--santos" aria-labelledby="santos-titulo">
+  <div class="contenedor">
+    <div class="encabezado-seccion"><h2 id="santos-titulo">Santos de Hoy</h2><p>Conoce a los santos que interceden por nosotros</p></div>
+    <article class="santo-hoy">
+      <a class="santo-hoy__enlace" href="{{ santo.url | relative_url }}">
+        <img class="santo-hoy__imagen" src="https://i.ytimg.com/vi/{{ santo.youtube_id }}/hqdefault.jpg" loading="lazy" alt="{{ santo.santo | escape }}">
+        <div class="santo-hoy__cuerpo">
+          <h3>{{ santo.santo }}</h3>
+          <p>{{ santo.description }}</p>
+          <span class="boton">Leer su biografía</span>
+        </div>
+      </a>
+    </article>
+  </div>
+</section>
+{% endif %}

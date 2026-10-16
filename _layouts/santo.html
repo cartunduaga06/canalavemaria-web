@@ -1,0 +1,36 @@
+---
+layout: default
+---
+{%- assign url_youtube = 'https://www.youtube.com/watch?v=' | append: page.youtube_id -%}
+<article class="contenido santo"><div class="contenedor"><div class="contenido__cuerpo">
+<p class="santo__migas"><a href="{{ '/santos/' | relative_url }}">&larr; Todos los santos</a></p>
+<h1>{{ page.santo }}</h1>
+{% if page.description %}<p class="santo__resumen">{{ page.description }}</p>{% endif %}
+<a class="reproductor" href="{{ url_youtube }}" data-embed="https://www.youtube-nocookie.com/embed/{{ page.youtube_id }}?autoplay=1" data-titulo="{{ page.title | escape }}">
+<img class="reproductor__imagen" src="https://i.ytimg.com/vi/{{ page.youtube_id }}/hqdefault.jpg" width="480" height="360" decoding="async" alt="Miniatura del vídeo: {{ page.title | escape }}">
+<span class="reproductor__boton"><span class="reproductor__icono" aria-hidden="true"></span><span class="reproductor__texto">Reproducir vídeo</span></span>
+</a>
+<p class="reproductor__nota">El vídeo se carga desde YouTube solo cuando pulsas reproducir.</p>
+<div class="santo__biografia">{{ content }}</div>
+{% if page.sources and page.sources.size > 0 %}<section class="santo__fuentes" aria-labelledby="fuentes-titulo"><h2 id="fuentes-titulo">Fuentes consultadas</h2><ul>{% for fuente in page.sources %}<li><a href="{{ fuente.url }}" rel="noopener nofollow">{{ fuente.name }}</a></li>{% endfor %}</ul></section>{% endif %}
+<p class="santo__aviso">Contenido de divulgación católica elaborado con ayuda de inteligencia artificial (investigación, guion, voz e imágenes) y revisado por el equipo del canal. Las ilustraciones del vídeo son representaciones artísticas generadas con inteligencia artificial; este contenido es independiente y no está patrocinado ni respaldado por OpenAI. Producción audiovisual: Canal Ave María.</p>
+<p><a class="boton" href="{{ url_youtube }}">Ver en YouTube</a></p>
+{% if page.tags %}<div class="etiquetas">{% for tag in page.tags %}<span class="etiqueta">#{{ tag }}</span>{% endfor %}</div>{% endif %}
+</div></div></article>
+<script>
+document.querySelectorAll('a.reproductor[data-embed]').forEach(function (enlace) {
+  enlace.addEventListener('click', function (evento) {
+    evento.preventDefault();
+    var marco = document.createElement('iframe');
+    marco.className = 'video-embed';
+    marco.src = enlace.dataset.embed;
+    marco.title = enlace.dataset.titulo;
+    marco.allow = 'autoplay; encrypted-media; picture-in-picture';
+    marco.allowFullscreen = true;
+    enlace.replaceWith(marco);
+    var nota = document.querySelector('.reproductor__nota');
+    if (nota) nota.remove();
+    marco.focus();
+  });
+});
+</script>

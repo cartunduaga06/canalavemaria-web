@@ -5,8 +5,9 @@ from html.parser import HTMLParser
 import re, subprocess, sys
 
 ROOT = Path(__file__).resolve().parents[1]
-REQUIRED = ["_config.yml", "CNAME", "index.html", "_layouts/default.html", "_layouts/home.html", "_layouts/post.html", "_layouts/pagina.html", "_layouts/wide.html", "_includes/cabecera.html", "_includes/pie.html", "_includes/ultimos-videos.html", "assets/css/estilos.css"]
+REQUIRED = ["_config.yml", "CNAME", "index.html", "_layouts/default.html", "_layouts/home.html", "_layouts/post.html", "_layouts/pagina.html", "_layouts/wide.html", "_layouts/santo.html", "_includes/cabecera.html", "_includes/pie.html", "_includes/ultimos-videos.html", "_includes/santo-hoy.html", "santos/index.html", "assets/css/estilos.css"]
 FIELDS = ["title", "date", "kind", "youtube_id", "passage", "description", "tags"]
+SANTO_FIELDS = ["title", "santo", "date", "youtube_id", "description"]
 LEGAL_PHRASES = {
     "privacidad/index.html": ["carlosandresproyectos@gmail.com", "uso limitado", "myaccount.google.com/permissions"],
     "terminos/index.html": ["carlosandresproyectos@gmail.com", "tal cual", "myaccount.google.com/permissions"],
@@ -52,10 +53,14 @@ def main(root=None):
         path = root / item
         if path.exists() and "include ultimos-videos.html" not in path.read_text(encoding="utf-8"):
             errors.append(f"{item}: falta include ultimos-videos.html")
+    for item, needle in (("_layouts/home.html", "include santo-hoy.html"), ("santos/index.html", "site.santos")):
+        path = root / item
+        if path.exists() and needle not in path.read_text(encoding="utf-8"):
+            errors.append(f"{item}: falta {needle}")
     post_layout = root / "_layouts/post.html"
     if post_layout.exists() and "{{ content }}" not in post_layout.read_text(encoding="utf-8"):
         errors.append("_layouts/post.html: falta {{ content }}")
-    for item in ("_includes/ultimos-videos.html", "_layouts/home.html", "videos/index.html", "_layouts/post.html"):
+    for item in ("_includes/ultimos-videos.html", "_includes/santo-hoy.html", "_layouts/santo.html", "santos/index.html", "_layouts/home.html", "videos/index.html", "_layouts/post.html"):
         path = root / item
         if not path.exists(): continue
         text = path.read_text(encoding="utf-8")
@@ -73,6 +78,15 @@ def main(root=None):
         if "TODO" in text: errors.append(f"{post}: contiene TODO")
         if "youtube_id" in data and (not YOUTUBE_ID.fullmatch(data["youtube_id"]) or data["youtube_id"] == "dQw4w9WgXcQ"):
             errors.append(f"{post}: youtube_id inválido o de ejemplo")
+    santos = list((root / "_santos").glob("*.md")) if (root / "_santos").exists() else []
+    for santo in santos:
+        text = santo.read_text(encoding="utf-8")
+        data = frontmatter(santo)
+        for field in SANTO_FIELDS:
+            if not data.get(field): errors.append(f"{santo.relative_to(root)}: falta cabecera {field}")
+        if "TODO" in text: errors.append(f"{santo.relative_to(root)}: contiene TODO")
+        if data.get("youtube_id") and (not YOUTUBE_ID.fullmatch(data["youtube_id"]) or data["youtube_id"] == "dQw4w9WgXcQ"):
+            errors.append(f"{santo.relative_to(root)}: youtube_id inválido o de ejemplo")
     config = (root / "_config.yml").read_text(encoding="utf-8") if (root / "_config.yml").exists() else ""
     exclude_match = re.search(r"(?ms)^exclude:\s*\n((?:\s+-.*\n?)*)", config)
     excluded = set(re.findall(r"^\s+-\s+([^\s#]+)", exclude_match.group(1), re.M)) if exclude_match else set()
@@ -121,7 +135,7 @@ def main(root=None):
     if errors:
         print("VALIDACIÓN FALLIDA")
         print("\n".join(f"- {error}" for error in errors)); return 1
-    print(f"VALIDACIÓN OK: {len(posts)} entrada(s) publicada(s)")
+    print(f"VALIDACIÓN OK: {len(posts)} entrada(s) publicada(s), {len(santos)} santo(s)")
     if root != ROOT:
         return 0
     try:

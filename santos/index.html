@@ -1,9 +1,23 @@
 ---
-layout: pagina
+layout: wide
 title: Santos
+permalink: /santos/
 description: Conoce la vida y el testimonio de los santos.
 ---
 
-<h1>Santos</h1>
-<p>Conoce a los santos que interceden por nosotros y acompañan nuestro camino de fe.</p>
-<p><strong>TODO:</strong> trasladar el catálogo completo de santos del proyecto de Horizons.</p>
+{%- assign santos_recientes = site.santos | sort: 'date' | reverse -%}
+<section class="seccion santos-page"><div class="contenedor">
+<header class="pagina-encabezado"><h1>Santos</h1><p>Conoce a los santos que interceden por nosotros y acompañan nuestro camino de fe.</p></header>
+{% if santos_recientes.size > 0 %}
+<div class="ultimos-videos__rejilla">
+{% for santo in santos_recientes %}
+<article class="ultimos-videos__tarjeta"><a class="ultimos-videos__enlace" href="{{ santo.url | relative_url }}">
+<img class="ultimos-videos__miniatura" src="https://i.ytimg.com/vi/{{ santo.youtube_id }}/hqdefault.jpg" loading="lazy" alt="{{ santo.santo | escape }}">
+<div class="ultimos-videos__cuerpo"><span class="ultimos-videos__tipo">Biografía</span><h3>{{ santo.santo }}</h3><p>{{ santo.description }}</p></div>
+</a></article>
+{% endfor %}
+</div>
+{% else %}
+<p>Pronto publicaremos aquí la vida de cada santo que presentamos en el canal.</p>
+{% endif %}
+</div></section>
